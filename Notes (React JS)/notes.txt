@@ -1,1 +1,19 @@
-React JS :- Library and frame work
+Library and Frame work difference :-
+-> Library and frame work both provide pre-return code and functionality's but frame work is fully independent but library is not.
+
+React JS :-
+-> React is a JavaScript library. Maintain and develop by facebook. Use to create single page application and provide us reach user interface (UI).
+
+Features React JS :-
+-> Components
+-> virtual DOM
+-> JSX (JavaScript Syntax Extension)
+-> One way data waning
+
+SWC :- Speedy Web Compiler
+npm :- Node package manager
+
+Commands :-
+1. npm create vite (Enter)
+2. npm i
+3. npm dev
