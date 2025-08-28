@@ -8,10 +8,11 @@ Features React JS :-
 -> Components
 -> virtual DOM
 -> JSX (JavaScript Syntax Extension)
--> One way data waning
+-> One-Way Data Binding
 
 SWC :- Speedy Web Compiler
 npm :- Node package manager
+jsx :- JavaScript Syntax Extension
 
 Commands :-
 1. npm create vite (Enter)
