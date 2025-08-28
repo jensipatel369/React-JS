@@ -14,9 +14,11 @@ SWC :- Speedy Web Compiler
 npm :- Node package manager
 jsx :- JavaScript XML
 
-Commands :-
+React JS project run Commands :-
 1. npm create vite (Enter)
 2. npm i
 3. npm dev
 
 Component :- Component is a re-usable piece of code returns a part of UI.
+
+Module :- These are user define files or block of code which we can import and export.
