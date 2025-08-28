@@ -7,14 +7,16 @@ React JS :-
 Features React JS :-
 -> Components
 -> virtual DOM
--> JSX (JavaScript Syntax Extension)
+-> JSX (JavaScript XML)
 -> One-Way Data Binding
 
 SWC :- Speedy Web Compiler
 npm :- Node package manager
-jsx :- JavaScript Syntax Extension
+jsx :- JavaScript XML
 
 Commands :-
 1. npm create vite (Enter)
 2. npm i
 3. npm dev
+
+Component :- Component is a re-usable piece of code returns a part of UI.
