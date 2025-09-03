@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+*{
+    font-family: sans-serif;
+    /* scroll-behavior: smooth; */
+}
+.hero{
+    background-image: url(./img/bg.webp);
+    background-size: cover;
+}
+.img:hover{
+    transition: all .3s;
+    transform: scale(1.07);
+}
+.bg{
+    background-image: url(./img/leaf.webp); 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-size: cover;
+}

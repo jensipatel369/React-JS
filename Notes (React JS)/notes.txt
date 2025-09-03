@@ -19,13 +19,37 @@ SWC :- Speedy Web Compiler
 npm :- Node package manager
 jsx :- JavaScript XML
 
+
+Module :- These are user define files or block of code which we can import and export.
+
+JSX :- JavaScript XML it allows us to write HTML with JavaScript together. Represent by {}.
+
 Component :- Component is a re-usable piece of code returns a part of UI.
 -> There are 2 (two) type of component :-
    1. Functional Base Component :- When we write a simple JavaScript function in a component and it return some value.
    2. Class Base Component :- When we write ES6 classes (oops) in a component.
 
-Module :- These are user define files or block of code which we can import and export.
 
-JSX :- JavaScript XML it allows us to write HTML with JavaScript together. Represent by {}.
+
+... Class Component Inherit...
+
+-> Class components have all the features of react js like state, props, life cycle methods and all but functional components does not have those initially.
+
+-> In react 16.8 hooks were introduced which provide all the features of react in functional components.
+
+-> There are three life cycle stages :-
+   1. Mounting :- Creation of a components
+   2. Updating :- Updation of a components
+   3. Unmounting :- Completion of a components
+
+-> Life cycle Methods in Class Components :-
+   1.componentDidMount()
+   2.componentDidUppdate()
+   3.componentWillUnmount()
+
+-> Life cycle method in functional components
+
+-> There is a hook called useEffect()
+
 
 
