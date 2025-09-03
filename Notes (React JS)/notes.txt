@@ -11,7 +11,7 @@ Features React JS :-
 -> One-Way Data Binding
 
 React JS project run Commands :-
-1. npm create vite (Enter)
+1. npm create vite
 2. npm i
 3. npm dev
 
@@ -29,11 +29,12 @@ Component :- Component is a re-usable piece of code returns a part of UI.
    1. Functional Base Component :- When we write a simple JavaScript function in a component and it return some value.
    2. Class Base Component :- When we write ES6 classes (oops) in a component.
 
-
+-> Function mate :- rfc - React Function Component
+-> Class mate :- rcc - React Class Component
 
 ... Class Component Inherit...
 
--> Class components have all the features of react js like state, props, life cycle methods and all but functional components does not have those initially.
+-> Class components have all the features of react JS like state, props, life cycle methods and all but functional components does not have those initially.
 
 -> In react 16.8 hooks were introduced which provide all the features of react in functional components.
 

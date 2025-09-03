@@ -281,8 +281,8 @@ export default function Filter() {
     },
   ];
 
-//   let filterData = arr.filter((item) => item.category == "jewelery");
-  let filterData = arr.filter((item) => item.price >= 55);
+  let filterData = arr.filter((item) => item.category == "jewelery");
+  // let filterData = arr.filter((item) => item.price >= 55);
 
   return (
     <div>

@@ -9,11 +9,11 @@ import ClassCom from "./Component/ClassCom";
 
 function App(){
   return <div>
-    {/* <Home/> */}
+    <Home/>
     {/* <About/> */}
     {/* <Blog/> */}
     {/* <Contact/> */}
-    <ClassCom/>
+    {/* <ClassCom/> */}
     {/* <Filter/> */}
   </div>
 }
