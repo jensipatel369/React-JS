@@ -57,8 +57,12 @@ Component :- Component is a re-usable piece of code returns a part of UI.
 
   -> Life cycle method in functional components there is a hook called useEffect()
 
-2. State :- In React, "state" refers to a JavaScript object that holds data specific to a component, which can change over time and influence the component's rendering.
+2. State :- 
+-> In React, "state" refers to a JavaScript object that holds data specific to a component, which can change over time and influence the component's rendering. 
+-> state (this.state) Target
 
+3. Props :-
+-> Props stands for properties used to pass data from parent to child component. This is a fundamental concept of react JS.
 
 
 
