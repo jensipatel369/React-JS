@@ -8,17 +8,16 @@ Features React JS :-
 -> Components
 -> virtual DOM
 -> JSX (JavaScript XML)
--> One-Way Data Binding
+-> One-Way Data Binding (One-way data flow)
 
 React JS project run Commands :-
 1. npm create vite
 2. npm i
 3. npm dev
 
-SWC :- Speedy Web Compiler
+SWC :- Speedy Web Compiler  
 npm :- Node package manager
 jsx :- JavaScript XML
-
 
 Module :- These are user define files or block of code which we can import and export.
 
@@ -32,25 +31,35 @@ Component :- Component is a re-usable piece of code returns a part of UI.
 -> Function mate :- rfc - React Function Component
 -> Class mate :- rcc - React Class Component
 
-... Class Component Inherit...
+
+
+.... Class Component ....
 
 -> Class components have all the features of react JS like state, props, life cycle methods and all but functional components does not have those initially.
 
+-> Class Component Features :-
+   1. state
+   2. Props
+   3. Life Cycle
+
 -> In react 16.8 hooks were introduced which provide all the features of react in functional components.
 
--> There are three life cycle stages :-
-   1. Mounting :- Creation of a components
-   2. Updating :- Updation of a components
-   3. Unmounting :- Completion of a components
+1.Life cycle:-
+  -> There are three life cycle stages :-  
+    1. Mounting :- Creation of a components
+    2. Updating :- Updation of a components
+    3. Unmounting :- Completion of a components
 
--> Life cycle Methods in Class Components :-
-   1.componentDidMount()
-   2.componentDidUppdate()
-   3.componentWillUnmount()
+  -> Life cycle Methods in Class Components :-
+    1.componentDidMount()
+    2.componentDidUppdate()
+    3.componentWillUnmount()
 
--> Life cycle method in functional components
+  -> Life cycle method in functional components there is a hook called useEffect()
 
--> There is a hook called useEffect()
+2. State :- In React, "state" refers to a JavaScript object that holds data specific to a component, which can change over time and influence the component's rendering.
+
+
 
 
 
