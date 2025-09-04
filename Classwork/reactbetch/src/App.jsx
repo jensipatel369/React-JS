@@ -14,7 +14,7 @@ function App(){
     {/* <Blog/> */}
     {/* <Contact/> */}
     {/* <ClassCom/> */}
-    <Filter/>
+    <Filter name={"rahul"} subject={"React"}/>
   </div>
 }
 

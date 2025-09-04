@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function Filter() {
+export default function Filter({name, subject}) {
+
+  // console.log(props.name);
+  // console.log(props.subject);
+  
+
   // let arr = [12,14,15]
   // let arr2 = [34,36,37,...arr]
 
@@ -286,6 +291,10 @@ export default function Filter() {
 
   return (
     <div>
+      <h1>{name}</h1>
+      <h1>{subject}</h1>
+      {/* <h1>{props.name}</h1>
+      <h1>{props.subject}</h1> */}
       <h1>Map and Filter</h1>
       {filterData.map((e, i) => {
         return (
