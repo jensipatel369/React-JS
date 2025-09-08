@@ -69,8 +69,8 @@ Component :- Component is a re-usable piece of code returns a part of UI.
 
 ...Hooks...
 
-Hooks :- 
+Hooks :- Hooks in React are functions that allow you to "hook into" React state and lifecycle features from functional components. Introduced in React 16.8, they enable the use of state, side effects, and other React features without the need for class components. 
 
-1. useState :- 
+1. useState :-  The useState Hook in React allows functional components to manage and track state, which refers to data or properties that can change over time within an application.
 
 2.  
