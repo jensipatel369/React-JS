@@ -5,6 +5,7 @@ import Blog from "./Component/Blog";
 import Contact from "./Component/Contact";
 import Filter from "./Component/Filter";
 import ClassCom from "./Component/ClassCom";
+import Usestate from "./Component/Hooks/Usestate";
 
 
 function App(){
@@ -14,7 +15,8 @@ function App(){
     {/* <Blog/> */}
     {/* <Contact/> */}
     {/* <ClassCom/> */}
-    <Filter name={"rahul"} subject={"React"}/>
+    {/* <Filter name={"rahul"} subject={"React"}/> */}
+    <Usestate/>
   </div>
 }
 
