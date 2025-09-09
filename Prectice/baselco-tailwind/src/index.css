@@ -28,3 +28,8 @@
     background-image: url('/watch.jpg');
     background-size: cover;
 }
+.join{
+    background-image: url('/join.jpg');
+    background-size: cover;
+    height: 441px;
+}

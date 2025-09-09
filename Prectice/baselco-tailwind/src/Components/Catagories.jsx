@@ -24,6 +24,9 @@ export default function Catagories() {
         </div>
       </div>
       <div className='bg-black py-3.5 text-white w-290 m-auto text-sm'>UP TO 70% OFF THE ENTIRE STORE!. MADE WITH LOVE by <a href="#" className='underline'>The4 studio</a></div>
+      <h1 className='text-[#9B9B9B] text-[14px] tracking-widest mt-15'>MADE THE HARD WAY</h1>
+      <h1 className='text-[26px] tracking-wider my-2'>FEATURED PRODUCTS</h1>
+      <h1 className='text-[#9B9B9B] text-[14px] tracking-widest'>___X___</h1>
     </div>
   )
 }

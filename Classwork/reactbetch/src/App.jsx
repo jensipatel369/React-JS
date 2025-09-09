@@ -6,6 +6,7 @@ import Contact from "./Component/Contact";
 import Filter from "./Component/Filter";
 import ClassCom from "./Component/ClassCom";
 import Usestate from "./Component/Hooks/Usestate";
+import Useeffect from "./Component/Hooks/Useeffect";
 
 
 function App(){
@@ -16,7 +17,8 @@ function App(){
     {/* <Contact/> */}
     {/* <ClassCom/> */}
     {/* <Filter name={"rahul"} subject={"React"}/> */}
-    <Usestate/>
+    {/* <Usestate/> */}
+    <Useeffect/>
   </div>
 }
 

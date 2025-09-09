@@ -73,4 +73,6 @@ Hooks :- Hooks in React are functions that allow you to "hook into" React state 
 
 1. useState :-  The useState Hook in React allows functional components to manage and track state, which refers to data or properties that can change over time within an application.
 
-2.  
+2. useEffect :- 
+-> This is a important hook used to perform side effects in functional components like data fetching and API calling.
+-> We can also perform life cycle methods in functional components using useEffect hook.
