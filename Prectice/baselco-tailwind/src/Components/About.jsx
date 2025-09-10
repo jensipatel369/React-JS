@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Basal() {
   return (
-    <div className='basal mt-10 flex items-center justify-center'>
+    <div className='basal mt-25 flex items-center justify-center'>
       <div className='flex w-[70%] h-[340px] bg-white border-4 border-[#efefef]'>
         <div className='flex flex-col items-center w-[50%] h-[332px] border-r-1 border-e-[#efefef]'>
             <img src="logo.png" className='mt-10' alt="" />
