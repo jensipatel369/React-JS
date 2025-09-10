@@ -7,6 +7,8 @@ import Filter from "./Component/Filter";
 import ClassCom from "./Component/ClassCom";
 import Usestate from "./Component/Hooks/Usestate";
 import Useeffect from "./Component/Hooks/Useeffect";
+import Events from "./Component/Events";
+import CondionalRendering from "./Component/CondionalRendering";
 
 
 function App(){
@@ -18,7 +20,9 @@ function App(){
     {/* <ClassCom/> */}
     {/* <Filter name={"rahul"} subject={"React"}/> */}
     {/* <Usestate/> */}
-    <Useeffect/>
+    {/* <Useeffect/> */}
+    {/* <Events/> */}
+    <CondionalRendering/>
   </div>
 }
 
