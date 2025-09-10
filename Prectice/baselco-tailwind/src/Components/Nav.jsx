@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Nav() {
   return (
-    <div className='px-15 py-4 flex justify-between items-center fixed w-full z-99 bg-white'>
+    <div className='px-15 py-4 flex justify-between items-center fixed w-full z-99 bg-white mt-11'>
         <div className='text-[13px] flex gap-5'>
             <select name="" id="">
               <option value="">HOME</option>

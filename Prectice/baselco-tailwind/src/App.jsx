@@ -7,10 +7,13 @@ import Join from './Components/Join'
 import News from './Components/News'
 import About from './Components/About'
 import Footer from './Components/Footer'
+import MiniNav from './Components/MiniNav'
+import Say from './Components/Say'
 
 export default function App() {
   return (
     <div>
+      <MiniNav/>
       <Nav/>
       <Hero/>
       <Catagories/>
@@ -18,6 +21,7 @@ export default function App() {
       <Join/>
       <News/>
       <About/>
+      <Say/>
       <Footer/>
     </div>
   )
