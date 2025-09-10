@@ -5,6 +5,8 @@ import Catagories from './Components/Catagories'
 import Products from './Components/Products'
 import Join from './Components/Join'
 import News from './Components/News'
+import About from './Components/About'
+import Footer from './Components/Footer'
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
       <Products/>
       <Join/>
       <News/>
+      <About/>
+      <Footer/>
     </div>
   )
 }
