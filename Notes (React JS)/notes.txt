@@ -1,6 +1,8 @@
 Library and Frame work difference :-
 -> Library and frame work both provide pre-return code and functionality's but frame work is fully independent but library is not.
 
+...React JS...
+
 React JS :-
 -> React is a JavaScript library. Maintain and develop by facebook. Use to create single page application and provide us reach user interface (UI).
 
@@ -15,14 +17,26 @@ React JS project run Commands :-
 2. npm i
 3. npm dev
 
+
+...Full Form...
+
 SWC :- Speedy Web Compiler  
 npm :- Node package manager
 npx :- Node Package eXecute
 jsx :- JavaScript XML
 
+
+...Module...
+
 Module :- These are user define files or block of code which we can import and export.
 
+
+...JSX...
+
 JSX :- JavaScript XML it allows us to write HTML with JavaScript together. Represent by {}.
+
+
+...Component...
 
 Component :- Component is a re-usable piece of code returns a part of UI.
 -> There are 2 (two) type of component :-
@@ -76,3 +90,16 @@ Hooks :- Hooks in React are functions that allow you to "hook into" React state 
 2. useEffect :- 
 -> This is a important hook used to perform side effects in functional components like data fetching and API calling.
 -> We can also perform life cycle methods in functional components using useEffect hook.
+
+3. useRef :- This is a hook used to create mutable reference with DOM elements and it does not cause re-render. 
+
+
+...Key...
+
+Key :- Keys are special string attributes that you must include when creating lists of elements in React. They help React efficiently identify which items  in a list have changed, been added, or been removed.
+
+
+...Fragments...
+
+Fragments :- React Fragments are a feature in React that allow you to group multiple elements returned by a component's render method without adding an extra node to the DOM.
+
