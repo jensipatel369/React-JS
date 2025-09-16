@@ -1,10 +1,10 @@
 import { useRef } from "react"
 
 export default function Useref() {
-    const userRef = useRef();
-    const hanleClick = ()=>{
-        console.log(userRef.current.value);
-    }
+  const userRef = useRef();
+  const hanleClick = ()=>{
+      console.log(userRef.current.value);
+  }
 
   return (
     <div>

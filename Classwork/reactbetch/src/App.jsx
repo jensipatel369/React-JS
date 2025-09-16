@@ -10,6 +10,7 @@ import Useeffect from "./Component/Hooks/Useeffect";
 import Events from "./Component/Events";
 import CondionalRendering from "./Component/CondionalRendering";
 import Useref from "./Component/Hooks/Useref";
+import FormHandling from "./Component/FormHandling";
 
 
 function App(){
@@ -22,9 +23,10 @@ function App(){
     {/* <Filter name={"rahul"} subject={"React"}/> */}
     {/* <Usestate/> */}
     {/* <Useeffect/> */}
-    <Useref/>
+    {/* <Useref/> */}
     {/* <Events/> */}
     {/* <CondionalRendering/> */}
+    <FormHandling/>
   </>
 }
 
