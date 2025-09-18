@@ -103,3 +103,10 @@ Key :- Keys are special string attributes that you must include when creating li
 
 Fragments :- React Fragments are a feature in React that allow you to group multiple elements returned by a component's render method without adding an extra node to the DOM.
 
+
+...Controlled or Uncontrolled Components...
+
+Controlled :- In Controlled Components the form data is handled by react state or developer.
+
+Uncontrolled :- In Uncontrolled components the form data is handle by DOM itself using hooks like useRef.
+

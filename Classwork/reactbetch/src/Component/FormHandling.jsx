@@ -26,18 +26,14 @@ export default function FormHandling() {
     }
 
     return (
-        <div>
+        <>
             <h1>Form Handling</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={formdata.name} name='name' placeholder='Enter Your Name' onChange={(e) => { handleChange(e) }} />
                 <input type="text" value={formdata.subject} name='subject' placeholder='Enter Your Subject' onChange={(e) => { handleChange(e) }} />
                 <input type="text" value={formdata.age} name='age' placeholder='Enter Your Age' onChange={(e) => { handleChange(e) }} />
-                <label>
-                    <input type='radio' checked={formdata.gender === "male"} value={"male"} name='gender' onChange={(e) => { handleChange(e) }} />Male
-                </label>
-                <label>
-                    <input type='radio' checked={formdata.gender === "female"} value={"female"} name='gender' onChange={(e) => { handleChange(e) }} />Female
-                </label>
+                <input type='radio' checked={formdata.gender == "male" && true} value={"male"} name='gender' onChange={(e) => { handleChange(e) }} />Male
+                <input type='radio' checked={formdata.gender == "female" && true} value={"female"} name='gender' onChange={(e) => { handleChange(e) }} />Female
                 <select name='city' value={formdata.city} onChange={(e) => { handleChange(e) }}>
                     <option hidden>Enter Your City</option>
                     <option value="rajkot">Rajkot</option>
@@ -58,6 +54,6 @@ export default function FormHandling() {
                     </ul>
                 })
             }
-        </div>
+        </>
     )
 }
