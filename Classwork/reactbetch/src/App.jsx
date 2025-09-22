@@ -14,7 +14,7 @@ import FormHandling from "./Component/FormHandling";
 
 
 function App(){
-  return <> Fragments
+  return <>
     {/* <Home/> */}
     {/* <About/> */}
     {/* <Blog/> */}
