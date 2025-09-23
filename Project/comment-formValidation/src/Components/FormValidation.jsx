@@ -14,9 +14,21 @@ export default function FormValidation() {
         if (password !== conformpassword) return alert("Passwords do not match!");
         if (!email.includes("@")) return alert("Invalid Email!");
 
-        setSubmittedData({ name, age, email, password, conformpassword, city });
+        setSubmittedData({ 
+            name, 
+            age, 
+            email, 
+            password, 
+            conformpassword, 
+            city 
+        });
 
-        setName(""); setAge(""); setEmail(""); setPassword(""); setConformpassword(""); setCity("");
+        setName(""); 
+        setAge(""); 
+        setEmail(""); 
+        setPassword(""); 
+        setConformpassword(""); 
+        setCity("");
     };
 
     return (
