@@ -11,9 +11,14 @@ import Events from "./Component/Events";
 import CondionalRendering from "./Component/CondionalRendering";
 import Useref from "./Component/Hooks/Useref";
 import FormHandling from "./Component/FormHandling";
+import FormValidation from "./Component/formValidation";
+import LightDark from "./Component/LightDark";
+import { useState } from "react";
 
 
 function App(){
+  const [dark, setDark] = useState(false)
+
   return <>
     {/* <Home/> */}
     {/* <About/> */}
@@ -26,7 +31,9 @@ function App(){
     {/* <Useref/> */}
     {/* <Events/> */}
     {/* <CondionalRendering/> */}
-    <FormHandling/>
+    {/* <FormHandling/> */}
+    {/* <FormValidation/> */}
+    <LightDark dark={dark} setDark={setDark}/>
   </>
 }
 
