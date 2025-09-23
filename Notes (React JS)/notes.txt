@@ -110,3 +110,8 @@ Controlled :- In Controlled Components the form data is handled by react state o
 
 Uncontrolled :- In Uncontrolled components the form data is handle by DOM itself using hooks like useRef.
 
+
+...HOC...
+
+Higher-Order Components :-  A Higher-Order Component (HOC) in React is a function that takes a component as an argument and returns a new component with enhanced functionality or modified behavior. It is a pattern for reusing component logic and achieving separation of concerns.
+

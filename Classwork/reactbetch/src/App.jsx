@@ -14,6 +14,7 @@ import FormHandling from "./Component/FormHandling";
 import FormValidation from "./Component/formValidation";
 import LightDark from "./Component/LightDark";
 import { useState } from "react";
+import Loader from "./Component/Loader";
 
 
 function App(){
@@ -33,7 +34,8 @@ function App(){
     {/* <CondionalRendering/> */}
     {/* <FormHandling/> */}
     {/* <FormValidation/> */}
-    <LightDark dark={dark} setDark={setDark}/>
+    {/* <LightDark dark={dark} setDark={setDark}/> */}
+    <Loader/>
   </>
 }
 
