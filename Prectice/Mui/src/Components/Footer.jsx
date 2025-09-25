@@ -5,9 +5,9 @@ export default function Footer() {
         <div>
             <footer
                 className="flex flex-wrap justify-center lg:justify-between overflow-hidden gap-10 md:gap-20 py-16 px-6 md:px-16 lg:px-24 xl:px-32 text-[15px]"
-                style={{ backgroundColor: '#FC94AF', color: 'black' }}
+                style={{ backgroundColor: '#b0b689', color: 'black' }}
             >
-                <div className="flex flex-wrap items-start gap-25">
+                <div className="flex flex-wrap items-start gap-22">
                     <a href="https://prebuiltui.com">
                         <svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path

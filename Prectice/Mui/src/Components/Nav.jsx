@@ -49,7 +49,7 @@ export default function Nav(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ bgcolor: '#FC94AF', color: 'black' }}>
+            <AppBar component="nav" sx={{ bgcolor: '#b0b689', color: 'black' }}>
                 <Toolbar>
                     <IconButton
                         aria-label="open drawer"

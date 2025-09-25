@@ -17,7 +17,7 @@ export default function Swiper() {
   return (
     <Carousel afterChange={onChange}>
       <div>
-          <img style={contentStyle} src="3.jpg" alt="" className='w-[100%]' />
+          <img style={contentStyle} src="1.jpg" alt="" className='w-[100%]' />
       </div>
       <div>
         <img style={contentStyle} src="2.jpg" alt="" className='w-[100%]' />
@@ -26,7 +26,7 @@ export default function Swiper() {
         <img style={contentStyle} src="4.jpg" alt="" className='w-[100%]' />
       </div>
       <div>
-        <img style={contentStyle} src="1.jpg" alt="" className='w-[100%]' />
+        <img style={contentStyle} src="3.jpg" alt="" className='w-[100%]' />
       </div>
     </Carousel>
   );
