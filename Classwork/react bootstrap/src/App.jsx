@@ -54,7 +54,7 @@ export default function App() {
         </AccordionItem>
       </Accordion> */}
 
-          {/* <Accordion defaultActiveKey="0">
+      {/* <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
         <Accordion.Body>
@@ -80,12 +80,8 @@ export default function App() {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion> */}
-
+    
     <Mui/>
-
-
-
-
     </div>
   )
 }
