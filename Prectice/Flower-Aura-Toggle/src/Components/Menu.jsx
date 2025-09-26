@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Menu() {
   return ( 
-    <div className='flex justify-center items-center gap-7 border-1 border-[#dadada] py-3'>
+    <div className='flex justify-center items-center gap-8 text-[15.5px] border-1 border-[#dadada] py-3.5'>
         <a href="#">Flowers</a>      
         <a href="#">Cakes</a>      
         <a href="#">Combos</a>      
