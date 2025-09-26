@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './Components/Nav'
-import Footer from './Components/Footer'
 import Menu from './Components/Menu'
+import Toggle from './Components/Toggle'
 
 export default function App() {
+  const [dark, setDark] = useState(false)
+
   return (
     <div>
+      <Toggle/>
       <Nav/>
       <Menu/>
-      {/* <Footer/> */}
     </div>
   )
 }

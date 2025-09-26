@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Nav() {
+export default function Nav({dark,setDark}) {
   let arr = [
     {
       image : "track.svg",
@@ -26,7 +26,8 @@ export default function Nav() {
 
   return (
     <div className='flex justify-between px-30 py-4'>
-      <div className='flex gap-5 items-center'>
+      <div className='flex gap-5 items-center' style={{backgroundColor : (!dark) ? "white" : "black" }}>
+        <button onClick={setDark}>Light</button>
         <img src="logo.png" alt="" className='w-[202px] h-[54px]' />
         <div className='city w-[240px] h-[50px] p-[15px] rounded-lg flex justify-between items-center'>
           <div className='flex gap-3'>
@@ -43,7 +44,7 @@ export default function Nav() {
       <div className='flex gap-5'>
        {
          arr.map((e,i)=>{
-          return <div className='flex flex-col gap-0.5 items-center justify-center'>
+          return <div className='flex flex-col gap-0.5 items-center justify-center' key={i}>
             <img src={e.image} alt="" className='w-[25px]' />
             <h1 className='text-[13px]'>{e.title}</h1>
           </div>

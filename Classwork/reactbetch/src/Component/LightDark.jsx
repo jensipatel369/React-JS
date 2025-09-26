@@ -3,8 +3,6 @@ import React from 'react'
 export default function LightDark({dark,setDark}) {
   return (
     <div>
-      <button onClick={()=>setDark(!dark)}>Dark/Light</button>
-
 <nav style={{backgroundColor: dark ? "black" : "white"}} class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
