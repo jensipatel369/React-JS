@@ -24,7 +24,8 @@ export default function LocalCrud() {
     }
 
     return (
-        <div>
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+
             <h1>Local CRUD</h1>
 
             <form onSubmit={handleSubmit}>
@@ -42,7 +43,7 @@ export default function LocalCrud() {
             </form>
 
             {/* Output */}
-            <table border={1} style={{ width: "50%", textAlign: "center", margin: "auto", marginTop: "20px" }}>
+            <table border={1} style={{ width: "40%", textAlign: "center", margin: "auto", marginTop: "20px" }}>
                 <thead>
                     <tr style={{ height: "30px" }}>
                         <th>Id</th>
