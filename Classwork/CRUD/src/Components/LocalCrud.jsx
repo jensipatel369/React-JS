@@ -34,7 +34,9 @@ export default function LocalCrud() {
                     <option hidden>Enter your City</option>
                     <option value="rajkot">Rajkot</option>
                     <option value="surat">Surat</option>
-                    <option value="amreli">Amreli</option>
+                    <option value="vadodara">Vadodara</option>
+                    <option value="bhavnagar">Bhavnagar</option>
+                    <option value="ahmedabad">Ahmedabad</option>
                 </select>
                 <button type='submit'>Add Data</button>
             </form>
