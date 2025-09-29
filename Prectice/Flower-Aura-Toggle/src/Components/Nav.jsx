@@ -25,9 +25,8 @@ export default function Nav({dark,setDark}) {
   ]
 
   return (
-    <div className='flex justify-between px-30 py-4'>
-      <div className='flex gap-5 items-center' style={{backgroundColor : (!dark) ? "white" : "black" }}>
-        <button onClick={setDark}>Light</button>
+    <div className='flex justify-between px-30 py-4' style={{backgroundColor : (!dark) ? "white" : "black" }}>
+      <div className='flex gap-5 items-center'>
         <img src="logo.png" alt="" className='w-[202px] h-[54px]' />
         <div className='city w-[240px] h-[50px] p-[15px] rounded-lg flex justify-between items-center'>
           <div className='flex gap-3'>
@@ -51,6 +50,7 @@ export default function Nav({dark,setDark}) {
         })
        }
       </div>
+        <button onClick={setDark}>Light</button>
     </div>
   )
 }
