@@ -4,6 +4,7 @@ import Menu from './Components/Menu'
 import Toggle from './Components/Toggle'
 import Online from './Components/Online'
 import Card from './Components/Card'
+import Button from './Components/Button'
 
 export default function App() {
   const [dark, setDark] = useState(false)
@@ -14,7 +15,7 @@ export default function App() {
       <Nav/>
       <Menu/>
       <Online/>
-      <Card/>
+      <Button/>
     </div>
   )
 }
