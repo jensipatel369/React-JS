@@ -23,6 +23,19 @@ export default function LocalCrud() {
         localStorage.setItem("record", JSON.stringify([...record, formdata]))
     }
 
+    // Delete Function
+    const handleDelete = (id) => {
+        // console.log(id);
+        const newData = record.filter((e) => e.id !== id)
+        setRecord(newData)
+        localStorage.setItem("record", JSON.stringify(newData))
+    }
+
+    // Edit Function
+    const handleEdit = (id) => {
+        
+    }
+
     return (
         <div style={{ textAlign: "center", marginTop: "20px" }}>
 
@@ -50,6 +63,7 @@ export default function LocalCrud() {
                         <th>Name</th>
                         <th>Age</th>
                         <th>City</th>
+                        <th colSpan={2}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,13 +74,15 @@ export default function LocalCrud() {
                                 <td>{e.name}</td>
                                 <td>{e.age}</td>
                                 <td>{e.city}</td>
+                                <td><button onClick={() => handleEdit(e.id)}>Edit</button></td>
+                                <td><button onClick={() => handleDelete(e.id)}>Delete</button></td>
                             </tr>
                         )) : <p>Loading ...</p>
                     }
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colSpan={4}>Total Records: {record.length}</td>
+                        <th colSpan={6} style={{ height: "30px" }}>Total Records: {record.length}</th>
                     </tr>
                 </tfoot>
             </table>
