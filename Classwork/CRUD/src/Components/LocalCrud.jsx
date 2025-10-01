@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function LocalCrud() {
     const [formdata, setFormdata] = useState({})
     const [record, setRecord] = useState([])
+    const [editIndex, setEditIndex] = useState(null)
 
     useEffect(() => {
         const allData = JSON.parse(localStorage.getItem("record")) || []
@@ -19,8 +20,26 @@ export default function LocalCrud() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setRecord([...record, formdata])
-        localStorage.setItem("record", JSON.stringify([...record, formdata]))
+        if (editIndex == null) {
+            setRecord([...record, formdata])
+            localStorage.setItem("record", JSON.stringify([...record, formdata]))
+        } else {
+            // Edit
+            let singleData = record.find((e) => e.id === editIndex)
+            singleData.name = formdata.name
+            singleData.age = formdata.age
+            singleData.city = formdata.city
+            localStorage.setItem("record", JSON.stringify([...record]))
+        }
+
+        setEditIndex(null)
+
+        setFormdata({
+            name: "",
+            age: "",
+            city: ""
+        })
+
     }
 
     // Delete Function
@@ -33,7 +52,13 @@ export default function LocalCrud() {
 
     // Edit Function
     const handleEdit = (id) => {
-        
+        let singleData = record.find((e) => e.id === id)
+        setFormdata({
+            name: singleData.name,
+            age: singleData.age,
+            city: singleData.city
+        })
+        setEditIndex(id)
     }
 
     return (
@@ -42,9 +67,9 @@ export default function LocalCrud() {
             <h1>Local CRUD</h1>
 
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder='Enter your name' name='name' onChange={handleChange} />
-                <input type="text" placeholder='Enter your age' name='age' onChange={handleChange} />
-                <select name="city" onChange={handleChange}>
+                <input type="text" value={formdata.name} placeholder='Enter your name' name='name' onChange={handleChange} />
+                <input type="text" value={formdata.age} placeholder='Enter your age' name='age' onChange={handleChange} />
+                <select name="city" value={formdata.city} onChange={handleChange}>
                     <option hidden>Enter your City</option>
                     <option value="rajkot">Rajkot</option>
                     <option value="surat">Surat</option>
@@ -52,7 +77,7 @@ export default function LocalCrud() {
                     <option value="bhavnagar">Bhavnagar</option>
                     <option value="ahmedabad">Ahmedabad</option>
                 </select>
-                <button type='submit'>Add Data</button>
+                <button type='submit'>{editIndex == null ? "Add Data" : "Update Data"}</button>
             </form>
 
             {/* Output */}
