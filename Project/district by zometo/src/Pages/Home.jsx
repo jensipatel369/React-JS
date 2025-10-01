@@ -143,9 +143,9 @@ export default function Home() {
 
     return (
         <>
-            <div className='week pt-25 px-35'>
-                <h1 className='text-2xl font-semibold pb-7'>Happening this week</h1>
-                <div className='flex gap-4'>
+            <div className='week pt-20 sm:pt-24 lg:pt-28 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold pb-6 sm:pb-8 md:pb-10 text-gray-900'>Happening this week</h1>
+                <div className='flex gap-4 sm:gap-6 overflow-x-auto pb-4 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:overflow-x-visible'>
                     {
                         arr.map((e, i) => {
                             return <Card obj={e} key={i} />
@@ -154,9 +154,9 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='px-35 py-15'>
-                <h1 className='text-2xl font-semibold pb-7'>Hits from previous weeks</h1>
-                <div className='flex gap-4'>
+            <div className='px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 md:py-16 lg:py-20'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold pb-6 sm:pb-8 md:pb-10 text-gray-900'>Hits from previous weeks</h1>
+                <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6'>
                     {
                         arr2.map((e, i) => {
                             return <MiniCard obj={e} key={i} />
@@ -165,11 +165,11 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='px-35'>
-                <h1 className='text-2xl font-semibold pb-7'>India's Top Events</h1>
-                <div className='scroll'>
-                    <div className='w-775'>
-                        <div className='flex gap-4'>
+            <div className='px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 md:py-16'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold pb-6 sm:pb-8 md:pb-10 text-gray-900'>India's Top Events</h1>
+                <div className='overflow-x-auto pb-4'>
+                    <div className='w-max'>
+                        <div className='flex gap-4 sm:gap-6'>
                             {
                                 arr3.map((e, i) => {
                                     return <Card obj={e} key={i} />
@@ -180,9 +180,9 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='px-35 py-15'>
-                <h1 className='text-2xl font-semibold pb-7'>Top Gujarati movies near you</h1>
-                <div className='flex gap-4'>
+            <div className='px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 md:py-16 lg:py-20'>
+                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold pb-6 sm:pb-8 md:pb-10 text-gray-900'>Top Gujarati movies near you</h1>
+                <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6'>
                     {
                         arr4.map((e, i) => {
                             return <MiniCard obj={e} key={i} />
@@ -190,8 +190,6 @@ export default function Home() {
                     }
                 </div>
             </div>
-
-
         </>
     )
 }

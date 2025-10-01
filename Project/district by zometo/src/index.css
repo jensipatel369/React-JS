@@ -5,8 +5,103 @@
     background: linear-gradient(180deg, rgba(221, 215, 245, 1) 0%, rgba(236, 230, 250, 1) 18%, rgba(255, 255, 255, 1) 100%);
 }
 
-.scroll{
-    overflow: scroll;
+/* Hide scrollbar for webkit browsers */
+.overflow-x-auto::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.overflow-x-auto {
     scrollbar-width: none;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Additional responsive utilities */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Smooth scrolling for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better focus states for accessibility */
+*:focus {
+    outline: 2px solid #6444e4;
+    outline-offset: 2px;
+}
+
+/* Improved button hover states */
+button:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile-first responsive text sizing */
+.text-responsive {
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+}
+
+.text-responsive-lg {
+    font-size: clamp(1.125rem, 4vw, 2rem);
+}
+
+.text-responsive-xl {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* Better spacing for mobile */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Ultra-wide screen optimizations */
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
 
