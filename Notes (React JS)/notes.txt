@@ -115,3 +115,20 @@ Uncontrolled :- In Uncontrolled components the form data is handle by DOM itself
 
 Higher-Order Components :-  A Higher-Order Component (HOC) in React is a function that takes a component as an argument and returns a new component with enhanced functionality or modified behavior. It is a pattern for reusing component logic and achieving separation of concerns.
 
+
+...Routing...
+
+Routing in React.js refers to the process of navigation between different views or components within a single-page application (SPA) without requiring a full page reload.
+
+
+....React-router-dom Hook...
+
+1. useNavigate()
+2. useLocation()
+3. useParams()
+
+
+...useLocation...
+
+useLocation is a hook provided by react-router-dom used to access location object.
+
