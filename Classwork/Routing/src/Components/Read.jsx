@@ -19,7 +19,7 @@ export default function Read() {
 
   // Edit
   const handleEdit = (id) => {
-    navigate("/add", {state:{stid: id}});
+    navigate("/add", { state: { stid: id } });
   };
 
   return (
@@ -29,23 +29,22 @@ export default function Read() {
         <button>ADD DATA</button>
       </Link>
 
-      {record.length > 0 ? (
-        record.map((e, i) => (
-          <ul key={e.id}>
-            <li>{i + 1}</li>
-            <li>{e.name}</li>
-            <li>{e.age}</li>
-            <li>
-              <button onClick={() => handleEdit(e.id)}>Edit</button>
-            </li>
-            <li>
-              <button onClick={() => handleDelete(e.id)}>Delete</button>
-            </li>
-          </ul>
-        ))
-      ) : (
-        <p>NO RECORD</p>
-      )}
+      {
+        record.length > 0 ?
+          record.map((e, i) => {
+            <ul key={i}>
+              <li>{i + 1}</li>
+              <li>{e.name}</li>
+              <li>{e.age}</li>
+              <li>
+                <button onClick={() => handleEdit(e.id)}>Edit</button>
+              </li>
+              <li>
+                <button onClick={() => handleDelete(e.id)}>Delete</button>
+              </li>
+            </ul>
+          }) : <p>NO RECORD</p>
+      }
     </div>
   );
 }

@@ -6,6 +6,7 @@ export default function Add() {
   const navigate = useNavigate();
   const locationObj = useLocation();
 
+  // Edit
   useEffect(() => {
     if (locationObj.state) {
       let allData = JSON.parse(localStorage.getItem("record")) || [];
@@ -26,9 +27,8 @@ export default function Add() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     let allData = JSON.parse(localStorage.getItem("record")) || [];
-
+    
     if (!locationObj.state) {
       allData.push(formdata);
     } else {
@@ -51,7 +51,7 @@ export default function Add() {
         <input type="text" placeholder="Enter your age" value={formdata.age || ""} name="age" onChange={HandleChange} />
         <button type="submit">{locationObj.state ? "Update data" : "Add Data"}</button>
       </form> */}
-      
+
       <div>
         <input type="text" placeholder="Enter your name" value={formdata.name || ""} name="name" onChange={HandleChange} />
         <input type="text" placeholder="Enter your age" value={formdata.age || ""} name="age" onChange={HandleChange} />
