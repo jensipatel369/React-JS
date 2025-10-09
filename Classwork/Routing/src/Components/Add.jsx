@@ -29,17 +29,14 @@ export default function Add() {
 
     let allData = JSON.parse(localStorage.getItem("record")) || [];
 
-    if (!locationObj.state){
+    if (!locationObj.state) {
       allData.push(formdata);
-    }else{
+    } else {
       let singleData = allData.find(
         (item) => item.id == locationObj.state.stid
       );
-
-      if(singleData){
-        singleData.name = formdata.name;
-        singleData.age = formdata.age;
-      }
+      singleData.name = formdata.name;
+      singleData.age = formdata.age;
     }
 
     localStorage.setItem("record", JSON.stringify(allData));
@@ -49,11 +46,17 @@ export default function Add() {
   return (
     <div>
       <h1>Add</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Enter your name" value={formdata.name} name="name" onChange={HandleChange} />
-        <input type="text" placeholder="Enter your age" value={formdata.age} name="age" onChange={HandleChange} />
+      {/* <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter your name" value={formdata.name || ""} name="name" onChange={HandleChange} />
+        <input type="text" placeholder="Enter your age" value={formdata.age || ""} name="age" onChange={HandleChange} />
         <button type="submit">{locationObj.state ? "Update data" : "Add Data"}</button>
-      </form>
+      </form> */}
+      
+      <div>
+        <input type="text" placeholder="Enter your name" value={formdata.name || ""} name="name" onChange={HandleChange} />
+        <input type="text" placeholder="Enter your age" value={formdata.age || ""} name="age" onChange={HandleChange} />
+        <button onClick={handleSubmit}>{locationObj.state ? "Update data" : "Add Data"}</button>
+      </div>
     </div>
   );
 }
