@@ -10,14 +10,16 @@ export default function Read() {
     setRecord(allRecord);
   }, []);
 
+  // Delete
   const handleDelete = (id) => {
     let filterData = record.filter((item) => item.id !== id);
     localStorage.setItem("record", JSON.stringify(filterData));
     setRecord(filterData);
   };
 
+  // Edit
   const handleEdit = (id) => {
-    navigate("/add", { state: { stid: id } });
+    navigate("/add", {state:{stid: id}});
   };
 
   return (
