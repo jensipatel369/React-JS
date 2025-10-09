@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Read() {
@@ -15,6 +16,7 @@ export default function Read() {
     let filterData = record.filter((item) => item.id !== id);
     localStorage.setItem("record", JSON.stringify(filterData));
     setRecord(filterData);
+    toast.success('Successfully deleted!')
   };
 
   // Edit
@@ -24,6 +26,7 @@ export default function Read() {
 
   return (
     <div>
+      <Toaster position="top-center" reverseOrder={true} />
       <h1>Read</h1>
       <Link to="/add">
         <button>ADD DATA</button>
@@ -32,7 +35,7 @@ export default function Read() {
       {
         record.length > 0 ?
           record.map((e, i) => {
-            <ul key={i}>
+           return <ul key={i}>
               <li>{i + 1}</li>
               <li>{e.name}</li>
               <li>{e.age}</li>

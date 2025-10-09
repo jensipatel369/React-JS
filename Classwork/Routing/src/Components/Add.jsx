@@ -28,7 +28,7 @@ export default function Add() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let allData = JSON.parse(localStorage.getItem("record")) || [];
-    
+
     if (!locationObj.state) {
       allData.push(formdata);
     } else {
@@ -40,7 +40,10 @@ export default function Add() {
     }
 
     localStorage.setItem("record", JSON.stringify(allData));
-    navigate("/");
+    
+    setTimeout(() => {
+      navigate("/");
+    }, 500)
   };
 
   return (
