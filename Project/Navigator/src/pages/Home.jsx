@@ -11,9 +11,9 @@ export default function Home() {
         },
         {
             id : 2,
-            title : "Cake 1",
-            desc : "let arr one",
-            price : "250"
+            title : "Cake 2",
+            desc : "let arr two",
+            price : "270"
         },
     ]    
 

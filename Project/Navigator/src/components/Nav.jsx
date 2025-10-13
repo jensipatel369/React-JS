@@ -28,7 +28,7 @@ export default function Nav() {
                 </div>
                 <div className='flex flex-col gap-0.5 items-center justify-center'>
                     <button>
-                        <Link to={"/Cart"}>
+                        <Link to={"/cart"}>
                             <img src="cart.svg" alt="" className='w-[25px] cursor-pointer' />
                         </Link>
                     </button>
