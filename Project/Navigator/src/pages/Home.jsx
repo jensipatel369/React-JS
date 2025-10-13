@@ -5,27 +5,33 @@ export default function Home() {
     const product = [
         {
             id : 1,
-            title : "Cake 1",
-            desc : "let arr one",
-            price : "250"
+            img : "1.jpg",
+            title : "Vanilla Cake",
+            price : "775",
+            rate : "4.8",
+            reviews : "( 918 Reviews )",
+            time : "Tomorrow"
         },
         {
             id : 2,
-            title : "Cake 2",
-            desc : "let arr two",
-            price : "270"
+            img : "2.jpg",
+            title : "Vanilla Cake",
+            price : "775",
+            rate : "4.8",
+            reviews : "( 918 Reviews )",
+            time : "Tomorrow"
         },
     ]    
 
     localStorage.setItem("products",JSON.stringify(product))
 
   return (
-    <div>
+    <>
         {
             product.map((e,i)=>{
-                return <Cards key={i} id={e.id} title={e.title} desc={e.desc} price={e.price} />
+                return <Cards key={i} id={e.id} img={e.img} title={e.title} price={e.price} rate={e.rate} reviews={e.reviews} time={e.time} />
             })
         }
-    </div>
+    </>
   )
 }

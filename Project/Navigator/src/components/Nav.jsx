@@ -4,7 +4,7 @@ import Cart from '../pages/Cart'
 
 export default function Nav() {
     return (
-        <div className='flex justify-between px-30 py-4'>
+        <div className='flex justify-between px-30 py-4 border-b-1 border-[#EDF0FA]'>
             <div className='flex gap-5 items-center'>
                 <Link to={"/"}>
                     <img src="logo.png" alt="" className='w-[202px] h-[54px]' />
