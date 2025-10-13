@@ -7,7 +7,7 @@ export default function Nav() {
         <div className='flex justify-between px-30 py-4'>
             <div className='flex gap-5 items-center'>
                 <Link to={"/"}>
-                <img src="logo.png" alt="" className='w-[202px] h-[54px]' />
+                    <img src="logo.png" alt="" className='w-[202px] h-[54px]' />
                 </Link>
                 <div className='city w-[240px] h-[50px] p-[15px] rounded-lg flex justify-between items-center'>
                     <div className='flex gap-3'>
