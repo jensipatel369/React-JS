@@ -2,9 +2,13 @@ import React from 'react';
 
 export default function Cards({ id, img, title, price, rate, reviews, time }) {
     const addToCart = (id) => {
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({ id, img, title, price, rate, reviews, time });
-        localStorage.setItem("cart", JSON.stringify(cart));
+        let allProducts = JSON.parse(localStorage.getItem("products"));
+        let singleData = allProducts.find((item)=>item.id==id)
+        
+        let allCart = JSON.parse(localStorage.getItem("cart")) || [];
+        allCart.push(singleData)
+        
+        localStorage.setItem("cart",JSON.stringify(allCart))
         alert(`${title} added to cart!`);
     }
 

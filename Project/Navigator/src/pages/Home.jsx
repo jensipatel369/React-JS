@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from '../components/Cards'
 
 export default function Home() {
-    const product = [
+    const products = [
         {
             id: 1,
             img: "1.jpg",
@@ -139,7 +139,9 @@ export default function Home() {
         }
     ]
 
-    localStorage.setItem("products", JSON.stringify(product))
+    useEffect(() => {
+        localStorage.setItem("products", JSON.stringify(products));
+    }, []);
 
     return (
         <div className='bg-gray-50 pt-5'>
@@ -147,7 +149,7 @@ export default function Home() {
                 <h1 className='text-center py-5 text-2xl font-semibold'>List of Cake</h1>
                 <div className='w-full justify-center flex flex-wrap gap-8 pb-8'>
                     {
-                        product.map((e, i) => {
+                        products.map((e, i) => {
                             return <Cards key={i} id={e.id} img={e.img} title={e.title} price={e.price} rate={e.rate} reviews={e.reviews} time={e.time} />
                         })
                     }
