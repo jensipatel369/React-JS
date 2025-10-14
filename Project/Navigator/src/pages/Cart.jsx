@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Cart() {
   const [record, setRecord] = useState([])
@@ -46,9 +47,14 @@ export default function Cart() {
               </div>
             }) : 
             <div className='flex justify-center items-center text-2xl'>
-              <p>NO DATA</p>
+              <img src="empty.gif" alt="" className='w-50 mt-8' />
             </div>
         }
+      </div>
+      <div className='w-full my-8 flex justify-center'>
+        <Link to={"/"}>
+        <button className='city px-4 py-2 border-1 text-[#197889] font-semibold text-md border-[#197889] rounded-md cursor-pointer'>Go to Shopping</button>
+        </Link>
       </div>
     </>
   )
