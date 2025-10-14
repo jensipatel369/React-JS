@@ -12,7 +12,7 @@ export default function Cart() {
   const removeBtn = (id) => {
     const newData = record.filter((e) => e.id !== id)
     setRecord(newData)
-    localStorage.setItem("record", JSON.stringify(newData))
+    localStorage.setItem("cart", JSON.stringify(newData))
   }
 
   return (

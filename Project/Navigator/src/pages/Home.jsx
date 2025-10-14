@@ -139,9 +139,7 @@ export default function Home() {
         }
     ]
 
-    useEffect(() => {
-        localStorage.setItem("products", JSON.stringify(products));
-    }, []);
+    localStorage.setItem("products",JSON.stringify(products))
 
     return (
         <div className='bg-gray-50 pt-5'>
