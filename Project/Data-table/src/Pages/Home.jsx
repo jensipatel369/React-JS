@@ -38,7 +38,11 @@ export default function Home() {
         { img: "30.jpg", name: "Mochi", category: "Footwear" },
         { img: "33.jpg", name: "La Senza", category: "Lingerie" },
         { img: "31.jpg", name: "Regal", category: "Footwear" },
-        { img: "32.jpg", name: "Steve Madden", category: "Footwear" }
+        { img: "32.jpg", name: "Steve Madden", category: "Footwear" },
+        { img: "1.jpg", name: "Central", category: "Clothing" },
+        { img: "9.jpg", name: "Bewakoof.com", category: "Clothing" },
+        { img: "10.jpg", name: "Myntra", category: "Online Store" },
+        { img: "11.png", name: "Iconic", category: "Clothing" }
     ];
 
 
@@ -68,6 +72,7 @@ export default function Home() {
                             <option hidden>Select Your Brand</option>
                             <option value={"all"}>All</option>
                             <option value={"Clothing"}>Clothing</option>
+                            <option value={"Online Store"}>Online Store</option>
                             <option value={"Lingerie"}>Lingerie</option>
                             <option value={"Sportswear"}>Sportswear</option>
                             <option value={"Footwear"}>Footwear</option>
