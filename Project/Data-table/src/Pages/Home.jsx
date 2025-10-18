@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import Card from '../Components/Card';
+import Nav from '../Components/Nav';
+import Grocery from '../Components/Grocery';
+import Jewellery from '../Components/Jewellery';
+import Footer from '../Components/Footer';
 
 export default function Home() {
     const [search, setSearch] = useState("")
@@ -61,6 +65,7 @@ export default function Home() {
     return (
         <>
             <div>
+                <Nav/>
                 <div className='border-t-1 border-[#d6d6d6] py-4 px-7.5 flex gap-5 justify-center items-center text-[13px]'>
                     <div className='border-1 border-[#d6d6d6] py-2 w-150 px-3 flex items-center justify-between'>
                         <input type="search" id='search' placeholder='Search for a Brand' className='outline-none w-full' required onChange={(e) => setSearch(e.target.value)} />
@@ -84,6 +89,9 @@ export default function Home() {
                         <Card key={i} id={e.id} img={e.img} name={e.name} />
                     ))}
                 </div>
+                <Grocery/>
+                <Jewellery/>
+                <Footer/>
             </div>
         </>
     )
