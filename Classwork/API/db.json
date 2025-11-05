@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "952b",
+      "name": "Jensi ",
+      "age": "20",
+      "city": "Jasdan"
+    },
+    {
+      "id": "4043",
+      "name": "Krisha",
+      "age": "12",
+      "city": "Rajkot"
+    },
+    {
+      "id": "00e4",
+      "name": "Zankhi",
+      "age": "12",
+      "city": "Jasdan"
+    },
+    {
+      "id": "310f",
+      "name": "Jensi ",
+      "age": "20",
+      "city": "Rajkot"
+    },
+    {
+      "id": "cdcf",
+      "name": "Jeet",
+      "age": "13",
+      "city": "Rajkot"
+    }
+  ]
+}

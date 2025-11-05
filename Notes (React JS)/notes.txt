@@ -137,3 +137,11 @@ useLocation is a hook provided by react-router-dom used to access location objec
 
 Rest :- Representational State Transfer
 
+
+...JSON Server commands...
+
+npx json-server --port 5000 --watch db.json
+
+
+...
+
