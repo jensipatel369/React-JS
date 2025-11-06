@@ -52,6 +52,7 @@ export default function ApiCrud() {
             setRecord(newData);
         })
     }
+    
     const handleEdit = (id) => {
         const singleData = record.find((item) => item.id === id);
         setFormdata({
