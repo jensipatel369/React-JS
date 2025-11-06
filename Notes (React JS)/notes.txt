@@ -138,10 +138,36 @@ useLocation is a hook provided by react-router-dom used to access location objec
 Rest :- Representational State Transfer
 
 
+
 ...JSON Server commands...
 
 npx json-server --port 5000 --watch db.json
 
 
-...
+
+... State Management...
+
+1. Single component state management -> useState()
+2. Two component state management -> Props -> Props Drilling (The problem)
+3. Managing state in whole component tree -> Context API -> Limitation of components tree (The problem)
+-> Three(03) Steps Context API :-
+   1. Create Context
+   2. Provide Context
+   3. Consume Context
+4. Managing state globaly -> Redux
+
+
+...Hooks...
+
+1. useContext -> useContext is a hook. This consume a context value.
+
+2. useMemo() :- useMemo is a React Hook that optimizes performance by memoizing (caching) the result of a calculation between re-renders. It prevents expensive computations from being re-executed unnecessarily when a component re-renders.
+
+3. useCallback() :- The useCallback hook in React is used to memoize callback functions, preventing their re-creation on every render unless their dependencies change. This optimization is particularly beneficial when passing functions as props to child components, especially those wrapped with React.memo, to avoid unnecessary re-renders of the child.
+
+
+
+
+
+
 
