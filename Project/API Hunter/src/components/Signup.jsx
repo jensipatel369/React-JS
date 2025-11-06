@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Signup() {
 
     const [formdata, setFormdata] = useState({})
     const [record, setRecord] = useState([])
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchRecord();
@@ -20,6 +21,14 @@ export default function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        if (!formdata.email || !formdata.password || !formdata.fullName || !formdata.username) {
+            alert("Please fill in all fields");
+            return;
+            navigate('/');
+        }
+
+
         await axios.post("http://localhost:5000/users", formdata).then(res => {
             setFormdata({
                 email: "",
@@ -27,6 +36,7 @@ export default function Signup() {
                 fullName: "",
                 username: ""
             })
+            navigate('/login');
         })
     }
 

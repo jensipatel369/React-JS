@@ -1,9 +1,49 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 export default function Login() {
 
     const [showPassword, setShowPassword] = useState(false);
+    const [formdata, setFormdata] = useState({});
+    const [users, setUsers] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
+
+   const fetchUsers = async () => {
+        await axios.get("http://localhost:5000/users").then(res => {
+            setUsers(res.data)
+        })
+    }
+
+    const handleChange = (e) => {
+        setFormdata({
+            ...formdata,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const user = users.find(item => 
+            (item.email === formdata.email || item.username === formdata.email) && 
+            item.password === formdata.password
+        );
+
+        if (user) {
+            navigate('/insta-page');
+        } else {
+            setFormdata({
+                email: "",
+                password: ""
+            });
+            alert("Invalid email/username or password");
+        }
+    };
 
     return (
         <div className='bg-black w-full h-screen flex justify-center items-center'>
@@ -11,15 +51,31 @@ export default function Login() {
                 <div className='w-[350px] py-6 flex flex-col items-center justify-center border border-[#363636]'>
                     <div className='w-[268.5px]'>
                         <img src="logo.png" alt="" className='w-60' />
-                        <form className="flex flex-col gap-2 text-[14px] text-[#a8a8a8]">
-                            <input className="bg-[#121212] w-full h-9 px-2 border border-[#555555] rounded-sm" type="email" name="email" placeholder="Email or Username" />
+                        <form className="flex flex-col gap-2 text-[14px] text-[#a8a8a8]" onSubmit={handleSubmit}>
+                            <input 
+                                className="bg-[#121212] w-full h-9 px-2 border border-[#555555] rounded-sm text-white" 
+                                type="text" 
+                                name="email" 
+                                placeholder="Email or Username" 
+                                value={formdata.email}
+                                onChange={handleChange}
+                                required
+                            />
                             <div className="relative">
-                                <input className="bg-[#121212] w-full h-9 px-2 border border-[#555555] rounded-sm pr-14 text-white" type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" />
+                                <input 
+                                    className="bg-[#121212] w-full h-9 px-2 border border-[#555555] rounded-sm pr-14 text-white" 
+                                    type={showPassword ? 'text' : 'password'} 
+                                    name="password" 
+                                    placeholder="Password" 
+                                    value={formdata.password}
+                                    onChange={handleChange}
+                                    required
+                                />
                                 <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-2 top-1/2 -translate-y-1/2 text-[#a8a8a8] hover:text-white text-[12px] cursor-pointer" >
                                     {showPassword ? 'Hide' : 'Show'}
                                 </button>
                             </div>
-                            <button className="bg-[#4A5DF9] cursor-pointer text-white text-[14px] font-semibold flex justify-center items-center gap-3 rounded-md h-[33.5px] w-full mt-2">Log in</button>
+                            <button type="submit" className="bg-[#4A5DF9] cursor-pointer text-white text-[14px] font-semibold flex justify-center items-center gap-3 rounded-md h-[33.5px] w-full mt-2">Log in</button>
                         </form>
                         <div className='flex gap-3 justify-center items-center my-4'>
                             <div className='h-[1px] w-30 bg-[#363636]'></div>
@@ -43,29 +99,29 @@ export default function Login() {
                     </Link>
                 </div>
 
-                <footer class="w-full text-[12px] text-[#A8A8A8] mt-20">
-                    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-2">
-                        <a href="#" class="hover:underline">Meta</a>
-                        <a href="#" class="hover:underline">About</a>
-                        <a href="#" class="hover:underline">Blog</a>
-                        <a href="#" class="hover:underline">Jobs</a>
-                        <a href="#" class="hover:underline">Help</a>
-                        <a href="#" class="hover:underline">API</a>
-                        <a href="#" class="hover:underline">Privacy</a>
-                        <a href="#" class="hover:underline">Terms</a>
-                        <a href="#" class="hover:underline">Locations</a>
-                        <a href="#" class="hover:underline">Instagram Lite</a>
-                        <a href="#" class="hover:underline">Meta AI</a>
-                        <a href="#" class="hover:underline">Meta AI Articles</a>
-                        <a href="#" class="hover:underline">Threads</a>
-                        <a href="#" class="hover:underline">Contact Uploading & Non-Users</a>
-                        <a href="#" class="hover:underline">Meta Verified</a>
+                <footer className="w-full text-[12px] text-[#A8A8A8] mt-20">
+                    <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-2">
+                        <a href="#" className="hover:underline">Meta</a>
+                        <a href="#" className="hover:underline">About</a>
+                        <a href="#" className="hover:underline">Blog</a>
+                        <a href="#" className="hover:underline">Jobs</a>
+                        <a href="#" className="hover:underline">Help</a>
+                        <a href="#" className="hover:underline">API</a>
+                        <a href="#" className="hover:underline">Privacy</a>
+                        <a href="#" className="hover:underline">Terms</a>
+                        <a href="#" className="hover:underline">Locations</a>
+                        <a href="#" className="hover:underline">Instagram Lite</a>
+                        <a href="#" className="hover:underline">Meta AI</a>
+                        <a href="#" className="hover:underline">Meta AI Articles</a>
+                        <a href="#" className="hover:underline">Threads</a>
+                        <a href="#" className="hover:underline">Contact Uploading & Non-Users</a>
+                        <a href="#" className="hover:underline">Meta Verified</a>
                     </div>
-                    <div class="flex justify-center items-center gap-1 text-xs text-gray-500">
-                        <div class="flex items-center gap-1">
+                    <div className="flex justify-center items-center gap-1 text-xs text-gray-500">
+                        <div className="flex items-center gap-1">
                             <span>English</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
                         <p>© 2025 Instagram from Meta</p>
