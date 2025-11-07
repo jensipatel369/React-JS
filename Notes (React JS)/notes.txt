@@ -166,6 +166,35 @@ npx json-server --port 5000 --watch db.json
 3. useCallback() :- The useCallback hook in React is used to memoize callback functions, preventing their re-creation on every render unless their dependencies change. This optimization is particularly beneficial when passing functions as props to child components, especially those wrapped with React.memo, to avoid unnecessary re-renders of the child.
 
 
+...Redux...
+
+Definition of Redux :- Redux is a JavaScript library for predictable state management, commonly used with React to manage application-wide state. It provides a centralized store for your application's state, enabling a consistent and debuggable way to manage data flow.
+
+Key Concepts of Redux in React :-
+
+1. Store :- The central place where the entire application state resides.
+2. Actions :- Plain JavaScript objects that describe what happened. They have a type property and optionally a payload containing data.
+3. Reducers :- Pure functions that take the current state and an action, then return a new state. They specify how the application's state changes in response to actions.
+4. Dispatch :- The method used to send actions to the store, triggering state updates through reducers.
+
+-> Slice Redux :- A slice refers to a self-contained piece of state and its corresponding reducer logic and actions for a specific feature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

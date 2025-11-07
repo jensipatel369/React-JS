@@ -105,7 +105,7 @@ export default function Login() {
                         <a href="#" className="hover:underline">About</a>
                         <a href="#" className="hover:underline">Blog</a>
                         <a href="#" className="hover:underline">Jobs</a>
-                        <a href="#" className="hover:underline">Help</a>
+                        <a href="#" className="hover:underline">Help</a>x
                         <a href="#" className="hover:underline">API</a>
                         <a href="#" className="hover:underline">Privacy</a>
                         <a href="#" className="hover:underline">Terms</a>
