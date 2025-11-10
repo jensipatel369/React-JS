@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, incremnet } from '../feature/CounterSlice'
+import { decrement, incremet } from '../feature/CounterSlice'
 
 export default function Counter() {
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ export default function Counter() {
         <div className="text-6xl font-bold text-indigo-600 mb-8">{count}</div>
         <div className="flex justify-center gap-6">
           <button onClick={() => dispatch(decrement())} className="bg-red-400 hover:bg-red-500 cursor-pointer text-white font-semibold py-2 px-6 rounded-lg transition-all duration-200" >-</button>
-          <button onClick={() => dispatch(increment())} className="bg-green-400 hover:bg-green-500 cursor-pointer text-white font-semibold py-2 px-6 rounded-lg transition-all duration-200" >+</button>
+          <button onClick={() => dispatch(incremet())} className="bg-green-400 hover:bg-green-500 cursor-pointer text-white font-semibold py-2 px-6 rounded-lg transition-all duration-200" >+</button>
         </div>
       </div>
     </div>

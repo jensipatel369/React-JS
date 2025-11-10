@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div>
       <Provider store={store}>
-        <Counter />
-        {/* <CRUD/> */}
+        {/* <Counter /> */}
+        <CRUD/>
       </Provider>
     </div>
   )

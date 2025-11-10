@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addData } from '../feature/TodoSlice'
+import { addData, deleteData } from '../feature/TodoSlice'
 
 export default function CRUD() {
 
@@ -8,14 +8,14 @@ export default function CRUD() {
     const [formdata, setFormdata] = useState({})
     // const [record, setRecord] = useState([])
 
-    const data = useSelector((state)=>{
+    const data = useSelector((state) => {
         return state.TodoKey.record
     })
 
     const handleChange = (e) => {
         setFormdata({
             ...formdata,
-            id : Date.now(),
+            id: Date.now(),
             [e.target.name]: e.target.value
         });
     }
@@ -25,9 +25,13 @@ export default function CRUD() {
         dispatch(addData(formdata))
 
         setFormdata({
-            name : '',
-            age : ''
+            name: '',
+            age: ''
         })
+    }
+
+    const handleDelete = (id) => {
+        dispatch(deleteData(id))
     }
 
     return (
@@ -40,13 +44,13 @@ export default function CRUD() {
             </form>
 
             {
-                data.map((e,i)=>{
+                data.map((e, i) => {
                     return (
                         <ul key={i}>
                             <li>{e.id}</li>
                             <li>{e.name}</li>
                             <li>{e.age}</li>
-                            <li><button>Delete</button></li>
+                            <li><button onClick={()=>handleDelete(e.id)}>Delete</button></li>
                             <li><button>Edit</button></li>
                             <hr />
                         </ul>

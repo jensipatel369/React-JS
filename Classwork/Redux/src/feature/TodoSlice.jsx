@@ -8,7 +8,7 @@ export const todo = createSlice({
             state.record.push(action.payload)
         },
         deleteData : (state,action)=>{
-
+            state.record = state.record.filter(item => item.id !== action.payload)
         },
         updateData : (state,action)=>{
 

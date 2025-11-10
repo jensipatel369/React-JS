@@ -15,4 +15,4 @@ export const Counter = createSlice({
 })
 
 export default Counter.reducer
-export const {increment,decrement} = Counter.actions
+export const {incremet,decrement} = Counter.actions
