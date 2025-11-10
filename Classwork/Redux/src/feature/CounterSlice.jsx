@@ -4,9 +4,10 @@ export const Counter = createSlice({
     name : "Counter",
     initialState : {Count : 0},
     reducers : {
-        incremnet : (state,actions)=>{
+        increment : (state,actions)=>{
             state.Count += 1
         },
+
         decrement : (state,actions)=>{
             state.Count -= 1
         }
@@ -14,4 +15,4 @@ export const Counter = createSlice({
 })
 
 export default Counter.reducer
-export const {incremnet,decrement} = Counter.actions
+export const {increment,decrement} = Counter.actions
