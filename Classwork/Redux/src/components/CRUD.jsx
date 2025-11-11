@@ -6,7 +6,6 @@ export default function CRUD() {
 
     const dispatch = useDispatch()
     const [formdata, setFormdata] = useState({})
-    // const [record, setRecord] = useState([])
 
     const data = useSelector((state) => {
         return state.TodoKey.record
