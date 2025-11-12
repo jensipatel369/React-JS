@@ -32,12 +32,13 @@ export default function CRUD() {
             name: '',
             age: ''
         })
+        setEditIndex(null)
     }
 
     const handleDelete = (id) => {
         dispatch(deleteData(id))
     }
-    
+
     const handleEdit = (id) => {
         let singleData = data.find((item) => item.id == id);
         setFormdata({
@@ -55,7 +56,7 @@ export default function CRUD() {
                     <input type="text" value={formdata.name} name='name' placeholder='Enter your name' onChange={handleChange} className="w-[48%] mb-3 border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
                     <input type="text" value={formdata.age} name='age' placeholder='Enter your age' onChange={handleChange} className="w-[48%] mb-3 border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" />
                 </div>
-                <button type='submit' className="w-full bg-blue-600 cursor-pointer text-white py-2 rounded-md hover:bg-blue-700 transition">Add Data</button>
+                <button type='submit' className="w-full bg-blue-600 cursor-pointer text-white py-2 rounded-md hover:bg-blue-700 transition">{editIndex == null ? "Add Data" : "Update Data"}</button>
             </form>
             <div className="flex flex-wrap justify-center gap-4 w-full max-w-5xl">
                 {data.map((e, i) => (

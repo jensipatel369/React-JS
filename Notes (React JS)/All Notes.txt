@@ -180,6 +180,11 @@ Key Concepts of Redux in React :-
 -> Slice Redux :- A slice refers to a self-contained piece of state and its corresponding reducer logic and actions for a specific feature.
 
 
+...useReducer...
+
+-> useReducer is a hook used to handle complex state logic alternative to useState. It follows a similar pattern to redux.
+
+
 
 
 
