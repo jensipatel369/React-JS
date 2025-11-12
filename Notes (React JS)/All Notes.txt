@@ -185,6 +185,10 @@ Key Concepts of Redux in React :-
 -> useReducer is a hook used to handle complex state logic alternative to useState. It follows a similar pattern to redux.
 
 
+...Extra Reducer...
+
+-> Extra Reducer is an additional reducer that change the current slice state on another slice action.
+
 
 
 

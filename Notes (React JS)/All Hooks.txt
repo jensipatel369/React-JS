@@ -2,64 +2,51 @@
 
 1. useState :-  
 English :- The useState Hook in React allows functional components to manage and track state, which refers to data or properties that can change over time within an application.
-Gujarati :- કંપનીને અંદર બદલાતી માહિતી (ડેટા) સાચવવા અને અપડેટ કરવા માટે વપરાય છે. 
-English :- Used to save and update changing information (data) within the company.
+My Defination :- Used to save and update changing information (data) within the company.
 
 2. useEffect :- 
 English :-
 → This is an important hook used to perform side effects in functional components like data fetching and API calling.
-→ We can also perform lifecycle methods in functional components using the useEffect hook.
-Gujarati :- કંપની લોડ થાય ત્યારે અથવા કોઈ value બદલાય ત્યારે કામ કરવા (જેમ કે API call, data fetch) માટે વપરાય છે. 
-English :- Used to perform actions (such as API calls, data fetches) when the company loads or when a value changes.
+→ We can also perform lifecycle methods in functional components using the useEffect hook. 
+My Defination :- Used to perform actions (such as API calls, data fetches) when the company loads or when a value changes.
 
 3. useRef :- 
 English :- This hook is used to create mutable references with DOM elements and it does not cause re-render.
-Gujarati :- DOM element અથવા value માટે reference બનાવવા માટે વપરાય છે, અને value બદલાય તો પણ component re-render થતો નથી. 
-English :- Used to create a reference to a DOM element or value, and the component is not re-rendered even if the value changes.
+My Defination :- Used to store a DOM element or value without causing re-renders when it changes.
 
 4. useLocation :- 
 English :- This hook provided by react-router-dom is used to access the location object.
-Gujarati :- વેબ પેજનું હાલનું location (URL માહિતી) મેળવવા માટે વપરાય છે.
-English :- Used to get the current location (URL information) of a web page.
+My Defination :- Used to get the current location (URL information) of a web page.
 
 5. useNavigate() :- 
 English :- The useNavigate hook in React is part of React Router v6 and provides a way to programmatically navigate between different routes within your application.
-Gujarati :- એક પેજમાંથી બીજા પેજ પર programmatically જવા માટે વપરાય છે. 
-English :- Used to programmatically move from one page to another.
+My Defination :- Used to programmatically move from one page to another.
 
 6. useParams() :- 
 English :- The useParams hook enables functional components to access dynamic URL parameters. It provides a way to extract values from the URL path that are defined as dynamic segments in your route configuration.
-Gujarati :- URL માંથી dynamic values (parameter) મેળવવા માટે વપરાય છે. 
-English :- Used to get dynamic values ​​(parameters) from a URL.
+My Defination :- Used to get dynamic values ​​(parameters) from a URL.
 
 7. useContext -> 
 English :- useContext is a hook that allows consuming a context value directly.
-Gujarati :- Context માંથી સીધી value મેળવવા માટે વપરાય છે, એટલે કે props વિના data share કરી શકાય. 
-English :- Used to get values ​​directly from the Context, meaning data can be shared without props.
 
 8. useMemo() :- 
 English :- useMemo is a React Hook that optimizes performance by memoizing (caching) the result of a calculation between re-renders.
-Gujarati :- વધુ computation વાળા function નું પરિણામ યાદ રાખીને performance સુધારવા માટે વપરાય છે. 
-English :- Used to improve performance by remembering the results of functions with more computation.
+My Defination :- Usememo is a react hook that remembers a calculation to make the app faster.
 
 9. useCallback() :-
 English :- The useCallback hook memoizes callback functions, preventing their re-creation on every render unless dependencies change.
-Gujarati :- Function ફરીથી ન બને તે માટે તેને યાદ રાખવામાં મદદ કરે છે, જેથી performance સારી રહે. 
-English :- It helps to remember a function so that it doesn't happen again, so that performance remains good.
+My Defination :- The useCallback hook saves a function so it doesn't get recreated every time a component renders.
 
 10. useReducer() :-
 English :- This hook is used to handle complex state logic as an alternative to useState. It follows a similar pattern to Redux.
-Gujarati :- Complex state logic હેન્ડલ કરવા માટે useState ના વિકલ્પ તરીકે વપરાય છે. 
-English :- Used as an alternative to useState to handle complex state logic.
+My Defination :- Used as an alternative to useState to handle complex state logic.
 
 11. useDispatch() :- 
 English :- useDispatch is a hook provided by React Redux that allows functional components to dispatch actions to the Redux store.
-Gujarati :- Redux store માં actions મોકલવા (dispatch કરવા) માટે વપરાય છે. 
-English :- Used to dispatch actions to the Redux store.
+My Defination :- Used to dispatch actions to the Redux store.
 
 12. useSelector() :-
-English :- useSelector is a hook provided by React Redux that allows functional components to read data from the Redux store.
-Gujarati :- Redux store માંથી data વાંચવા માટે વપરાય છે. 
-English :- Used to read data from the Redux store.
+English :- useSelector is a hook provided by React Redux that allows functional components to read data from the Redux store. 
+My Defination :- Used to read data from the Redux store.
 
 
