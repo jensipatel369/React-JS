@@ -1,5 +1,20 @@
 {
-  "data" : [
-    
+  "data": [
+    {
+      "id": "9e81",
+      "name": "Jensi",
+      "age": "19",
+      "city": "Jasdan",
+      "subject": "Full Satck",
+      "gender": "Female"
+    },
+    {
+      "id": "059c",
+      "name": "Jenil",
+      "age": "15",
+      "city": "Rajkot",
+      "subject": "Maths",
+      "gender": "Male"
+    }
   ]
 }
