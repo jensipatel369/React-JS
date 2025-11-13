@@ -2,51 +2,49 @@
 
 1. useState :-  
 English :- The useState Hook in React allows functional components to manage and track state, which refers to data or properties that can change over time within an application.
-My Defination :- Used to save and update changing information (data) within the company.
+My Definition :- Used to save and update changing information (data) within the company.
 
 2. useEffect :- 
 English :-
 → This is an important hook used to perform side effects in functional components like data fetching and API calling.
 → We can also perform lifecycle methods in functional components using the useEffect hook. 
-My Defination :- Used to perform actions (such as API calls, data fetches) when the company loads or when a value changes.
+My Definition :- Used to perform actions (such as API calls, data fetches) when the company loads or when a value changes.
 
 3. useRef :- 
 English :- This hook is used to create mutable references with DOM elements and it does not cause re-render.
-My Defination :- Used to store a DOM element or value without causing re-renders when it changes.
+My Definition :- Used to store a DOM element or value without causing re-renders when it changes.
 
 4. useLocation :- 
-English :- This hook provided by react-router-dom is used to access the location object.
-My Defination :- Used to get the current location (URL information) of a web page.
+English :- This hook provided by react-router-Dom is used to access the location object.
+My Definition :- Used to get the current location (URL information) of a web page.
 
 5. useNavigate() :- 
-English :- The useNavigate hook in React is part of React Router v6 and provides a way to programmatically navigate between different routes within your application.
-My Defination :- Used to programmatically move from one page to another.
+English :- The useNavigate hook in React is part of React Router and provides a way to programmatically navigate between different routes within your application.
+My Definition :- Used to programmatically move from one page to another.
 
 6. useParams() :- 
 English :- The useParams hook enables functional components to access dynamic URL parameters. It provides a way to extract values from the URL path that are defined as dynamic segments in your route configuration.
-My Defination :- Used to get dynamic values ​​(parameters) from a URL.
+My Definition :- Used to get dynamic values ​​(parameters) from a URL.
 
 7. useContext -> 
 English :- useContext is a hook that allows consuming a context value directly.
 
 8. useMemo() :- 
-English :- useMemo is a React Hook that optimizes performance by memoizing (caching) the result of a calculation between re-renders.
-My Defination :- Usememo is a react hook that remembers a calculation to make the app faster.
+English :- useMemo is a React Hook that optimizes performance by memorizing (caching) the result of a calculation between re-renders.
+My Definition :- Usememo is a react hook that remembers a calculation to make the app faster.
 
 9. useCallback() :-
-English :- The useCallback hook memoizes callback functions, preventing their re-creation on every render unless dependencies change.
-My Defination :- The useCallback hook saves a function so it doesn't get recreated every time a component renders.
+English :- The useCallback hook memorizes callback functions, preventing their re-creation on every render unless dependencies change.
+My Definition :- The useCallback hook saves a function so it doesn't get recreated every time a component renders.
 
 10. useReducer() :-
 English :- This hook is used to handle complex state logic as an alternative to useState. It follows a similar pattern to Redux.
-My Defination :- Used as an alternative to useState to handle complex state logic.
+My Definition :- Used as an alternative to useState to handle complex state logic.
 
 11. useDispatch() :- 
 English :- useDispatch is a hook provided by React Redux that allows functional components to dispatch actions to the Redux store.
-My Defination :- Used to dispatch actions to the Redux store.
+My Definition :- Used to dispatch actions to the Redux store.
 
 12. useSelector() :-
 English :- useSelector is a hook provided by React Redux that allows functional components to read data from the Redux store. 
-My Defination :- Used to read data from the Redux store.
-
-
+My Definition :- Used to read data from the Redux store.
