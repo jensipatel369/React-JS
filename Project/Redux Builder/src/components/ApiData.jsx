@@ -13,10 +13,6 @@ export default function ApiData() {
     return state.ApiKey.record
   })
 
-  const loading = useSelector((state) => {
-    return state.ApiKey.loading
-  })
-
   useEffect(() => {
     dispatch(fetchData());
   }, [])
@@ -33,7 +29,7 @@ export default function ApiData() {
     if (editIndex == null) {
       dispatch(addData({ ...formdata }))
     } else {
-      dispatch(updateData({ id: editIndex, data: formdata }))
+      dispatch(updateData({ editIndex, formdata }))
     }
     setFormdata({
       name: "",
@@ -169,7 +165,7 @@ export default function ApiData() {
 
         <div className="bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Records</h2>
-          {loading ? (
+          {data.length === 0 ? (
             <div className="flex justify-center items-center py-12">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
             </div>

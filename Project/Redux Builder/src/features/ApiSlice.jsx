@@ -12,19 +12,12 @@ export const addData = createAsyncThunk("api/addData", async (newData) => {
 })
 
 export const deleteData = createAsyncThunk("api/deleteData", async (id) => {
-    await axios.delete(`http://localhost:5000/data/${id}`)
-    return id
+    const response = await axios.delete(`http://localhost:5000/data/${id}`)
+    return response.id
 })
 
-export const updateData = createAsyncThunk("api/updateData", async ({ id, data }) => {
-    const response = await axios.put(`http://localhost:5000/data/${id}`, {
-        id: id,
-        name: data.name,
-        age: data.age,
-        city: data.city,
-        subject: data.subject,
-        gender: data.gender
-    })
+export const updateData = createAsyncThunk("api/updateData", async ({ editIndex, formdata }) => {
+    const response = await axios.put(`http://localhost:5000/data/${editIndex}`, formdata)
     return response.data
 })
 
@@ -50,18 +43,26 @@ export const api = createSlice({
             state.loading = false
         })
         // Delete Data
+        builder.addCase(deleteData.pending, (state, action) => {
+            state.loading = true
+        })
         builder.addCase(deleteData.fulfilled, (state, action) => {
             state.record = state.record.filter(item => item.id !== action.payload)
             state.loading = false
         })
         // Update Data
-        builder.addCase(updateData.fulfilled, (state, action) => {
-            const index = state.record.findIndex(item => item.id === action.payload.id)
-            if (index !== -1) {
-                state.record[index] = action.payload
-            }
-            state.loading = false
+        builder.addCase(updateData.pending, (state, action) => {
+            state.loading = true
         })
+        builder.addCase(updateData.fulfilled, (state, action) => {
+            let singleData = state.record.find((item) => item.id == action.payload.id);
+            if (singleData) {
+                singleData.name = action.payload.name;
+                singleData.email = action.payload.email;
+                singleData.phone = action.payload.phone;
+            }
+        })
+
     })
 })
 
