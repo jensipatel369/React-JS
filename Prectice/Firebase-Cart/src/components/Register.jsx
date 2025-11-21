@@ -34,10 +34,10 @@ export default function Register() {
         <button type='submit' onClick={handleRegister}>Register</button><br /><br />
         <Link to="/login">Login</Link>
       </form> */}
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-[#cde7f1] flex items-center justify-center px-4">
         <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
 
-          <h1 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          <h1 className="text-3xl font-semibold text-[#0e4d65] mb-6 text-center">
             Register
           </h1>
 
@@ -70,14 +70,14 @@ export default function Register() {
             <button
               type="submit"
               onClick={handleRegister}
-              className="w-full py-3 bg-blue-600 text-white cursor-pointer rounded-lg font-medium hover:bg-blue-700 transition"
+              className="w-full py-3 bg-[#0e4d65] text-white cursor-pointer rounded-lg font-medium transition"
             >
               Register
             </button>
 
             <p className="text-center text-gray-600 text-sm">
               Already have an account?{" "}
-              <Link to="/login" className="text-blue-600 cursor-pointer font-medium hover:underline">
+              <Link to="/login" className="text-[#0e4d65] cursor-pointer font-medium hover:underline">
                 Login
               </Link>
             </p>

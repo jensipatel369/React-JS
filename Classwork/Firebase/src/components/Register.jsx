@@ -5,6 +5,7 @@ import { auth, db } from '../../firebaseConfig'
 import { doc, setDoc } from 'firebase/firestore'
 
 export default function Register() {
+  
   const [formdata, setFormdata] = useState({})
   const navigate = useNavigate()
 

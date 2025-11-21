@@ -33,10 +33,10 @@ export default function Login() {
         <button onClick={handleLogin}>Login</button><br /><br />
         <Link to="/register">Register</Link>
       </form> */}
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-[#cde7f1] flex items-center justify-center px-4">
         <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
 
-          <h1 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          <h1 className="text-3xl font-semibold text-[#0e4d65] mb-6 text-center">
             Login
           </h1>
 
@@ -60,14 +60,14 @@ export default function Login() {
 
             <button
               type="submit"
-              className="w-full py-3 bg-blue-600 text-white cursor-pointer rounded-lg font-medium hover:bg-blue-700 transition"
+              className="w-full py-3 bg-[#0e4d65] text-white cursor-pointer rounded-lg font-medium transition"
             >
               Login
             </button>
 
             <p className="text-center text-gray-600 text-sm">
               Don't have an account?{" "}
-              <Link to="/" className="text-blue-600 cursor-pointer font-medium hover:underline">
+              <Link to="/" className="text-[#0e4d65] cursor-pointer font-medium hover:underline">
                 Register
               </Link>
             </p>
