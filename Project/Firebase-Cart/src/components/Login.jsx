@@ -26,55 +26,20 @@ export default function Login() {
 
   return (
     <div>
-      {/* <h1>Login</h1>
-      <form>
-        <input type="text" name='email' placeholder='Enter your email' onChange={handleChange} />
-        <input type="text" name='password' placeholder='Enter your password' onChange={handleChange} /><br /><br />
-        <button onClick={handleLogin}>Login</button><br /><br />
-        <Link to="/register">Register</Link>
-      </form> */}
       <div className="min-h-screen bg-[#cde7f1] flex items-center justify-center px-4">
         <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
-
-          <h1 className="text-3xl font-semibold text-[#0e4d65] mb-6 text-center">
-            Login
-          </h1>
-
+          <h1 className="text-3xl font-semibold text-[#0e4d65] mb-6 text-center">Login</h1>
           <form className="space-y-4" onSubmit={handleLogin}>
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-
-            <button
-              type="submit"
-              className="w-full py-3 bg-[#0e4d65] text-white cursor-pointer rounded-lg font-medium transition"
-            >
-              Login
-            </button>
-
+            <input type="email" name="email" placeholder="Enter your email" onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+            <input type="password" name="password" placeholder="Enter your password" onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+            <button type="submit" className="w-full py-3 bg-[#0e4d65] text-white cursor-pointer rounded-lg font-medium transition" >Login</button>
             <p className="text-center text-gray-600 text-sm">
               Don't have an account?{" "}
-              <Link to="/" className="text-[#0e4d65] cursor-pointer font-medium hover:underline">
-                Register
-              </Link>
+              <Link to="/" className="text-[#0e4d65] cursor-pointer font-medium hover:underline">Register</Link>
             </p>
           </form>
         </div>
       </div>
-
     </div>
   )
 }
