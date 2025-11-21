@@ -14,14 +14,10 @@ export default function Login() {
     })
   }
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
-    try {
-      await signInWithEmailAndPassword(auth, formdata.email, formdata.password)
-      navigate('/deshboard')
-    } catch (error) {
-      console.error('Unable to sign in', error)
-    }
+  const handleLogin = async () => {
+    await signInWithEmailAndPassword(auth, formdata.email, formdata.password).then((res) => {
+      navigate('/deskboard')
+    })
   }
 
   return (
