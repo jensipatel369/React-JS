@@ -25,12 +25,6 @@ export default function Register() {
 
   return (
     <div>
-      {/* <h1>Register</h1>
-      <input type="text" name='name' placeholder='Enter your name' onChange={handlechange} />
-      <input type="text" name='email' placeholder='Enter your email' onChange={handlechange} />
-      <input type="text" name='password' placeholder='Enter your password' onChange={handlechange} /> <br /><br />
-      <button onClick={handleRegister}>Register</button><br /><br />
-      <Link to="/login">Login</Link> */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-white to-blue-100 p-6">
         <div className="bg-white shadow-xl rounded-2xl p-10 w-full max-w-md border border-pink-100">
           <h1 className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">Create Account</h1>

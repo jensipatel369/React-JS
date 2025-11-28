@@ -22,11 +22,6 @@ export default function Login() {
 
   return (
     <div>
-      {/* <h1>Login</h1>
-      <input type="text" name='email' placeholder='Enter your email' onChange={handlechange} />
-      <input type="text" name='password' placeholder='Enter your password' onChange={handlechange} /> <br /><br />
-      <button onClick={handleLogin}>Login</button><br /><br />
-      <Link to="/">Register</Link> */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-white to-blue-100 p-6">
         <div className="bg-white shadow-xl rounded-2xl p-10 w-full max-w-md border border-blue-100">
           <h1 className="text-3xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">Login</h1>
