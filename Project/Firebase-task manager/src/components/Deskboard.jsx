@@ -85,10 +85,12 @@ export default function Dashboard() {
             <h1 className="text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">Welcome, {userData && userData.name}!</h1>
             <p className="text-gray-600 mt-1">Manage your tasks efficiently</p>
           </div>
-          <button onClick={handleLogout} className="px-6 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-red-400 to-pink-400 hover:scale-105 transition-transform shadow-lg cursor-pointer">Log Out</button>
+          <div className='flex gap-3'>
+            <img src={userData && userData.photo} alt="User Avatar" className="w-12 h-12 rounded-full mt-2" />
+            <button onClick={handleLogout} className="px-6 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-red-400 to-pink-400 hover:scale-105 transition-transform shadow-lg cursor-pointer">Log Out</button>
+          </div>
         </div>
       </div>
-
       <div className="max-w-4xl mx-auto">
         <div className="bg-white shadow-xl rounded-2xl p-8 mb-8 border border-pink-100">
           <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">{editIndex ? "Update Task" : "Add New Task"}</h2>
