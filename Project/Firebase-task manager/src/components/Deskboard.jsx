@@ -86,7 +86,7 @@ export default function Dashboard() {
             <p className="text-gray-600 mt-1">Manage your tasks efficiently</p>
           </div>
           <div className='flex gap-3'>
-            <img src={userData && userData.photo} alt="User Avatar" className="w-12 h-12 rounded-full mt-2" />
+            <img src={userData?.photo ? userData.photo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfgJ0SYGF5qAueA_nbIYvUB58DCZ2KG-DkYA&s"} alt="User Avatar" className="w-12 h-12 rounded-full mt-2" />
             <button onClick={handleLogout} className="px-6 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-red-400 to-pink-400 hover:scale-105 transition-transform shadow-lg cursor-pointer">Log Out</button>
           </div>
         </div>
