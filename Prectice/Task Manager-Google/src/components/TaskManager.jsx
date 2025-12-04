@@ -45,7 +45,6 @@ export default function TaskManager() {
         ...data.data(),
       }))
       .filter((t) => t.uid === userId);
-
     setRecord(newData);
   };
 
