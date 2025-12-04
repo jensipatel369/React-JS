@@ -26,7 +26,7 @@ export default function TaskManager() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) setUserId(user.uid);
-      else navigate("/"); // redirect if logged out
+      else navigate("/");
     });
   }, []);
 
@@ -60,8 +60,6 @@ export default function TaskManager() {
   // Add or update a task
   const handleTask = async () => {
     const obj = { uid: userId, Task, priourity };
-
-    if (!Task.trim()) return alert("Task cannot be empty");
 
     if (editIndex == null) {
       await addDoc(collection(db, "Todos"), obj);
@@ -111,11 +109,7 @@ export default function TaskManager() {
           </div>
           <h1 className="text-white font-semibold text-2xl">Dashboard</h1>
         </div>
-
-        <button
-          onClick={handleLogout}
-          className="bg-white cursor-pointer text-purple-700 font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-100 transition"
-        >
+        <button onClick={handleLogout} className="bg-white cursor-pointer text-purple-700 font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-100 transition" >
           Logout
         </button>
       </div>
@@ -123,31 +117,15 @@ export default function TaskManager() {
       {/* Add Task Card */}
       <div className="bg-white shadow-xl rounded-2xl p-6 m-6 mt-6">
         <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
-
         <div className="flex flex-col md:flex-row gap-4">
-          <input
-            type="text"
-            value={Task}
-            onChange={(e) => setTask(e.target.value)}
-            placeholder="Enter task name..."
-            className="flex-1 px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-300 outline-none"
-          />
-
-          <select
-            value={priourity}
-            onChange={(e) => setPriourity(e.target.value)}
-            className="w-full md:w-48 px-4 py-3 border rounded-lg bg-white focus:ring-2 focus:ring-purple-300 outline-none"
-          >
+          <input type="text" value={Task} onChange={(e) => setTask(e.target.value)} placeholder="Enter task name..." className="flex-1 px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-300 outline-none" />
+          <select value={priourity} onChange={(e) => setPriourity(e.target.value)} className="w-full md:w-48 px-4 py-3 border rounded-lg bg-white focus:ring-2 focus:ring-purple-300 outline-none" >
             <option value="">Priority</option>
             <option value="High">High</option>
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>
           </select>
-
-          <button
-            onClick={handleTask}
-            className="px-6 py-3 cursor-pointer rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold shadow-md hover:opacity-90 transition"
-          >
+          <button onClick={handleTask} className="px-6 py-3 cursor-pointer rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold shadow-md hover:opacity-90 transition" >
             {editIndex ? "Update Task" : "Add Task"}
           </button>
         </div>
@@ -155,10 +133,8 @@ export default function TaskManager() {
 
       {/* Task List */}
       <div className="bg-white shadow-xl rounded-2xl p-6 mt-6 m-6">
-
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold">Your Tasks</h2>
-
           <span className="px-3 py-1 text-sm rounded-full bg-purple-100 text-purple-700 font-medium">
             {record.length} tasks
           </span>
@@ -175,43 +151,31 @@ export default function TaskManager() {
           </div>
         ) : (
           <div className="flex justify-center flex-wrap gap-4">
+            {
+              record.map((e, i) => {
+                const priorityColor =
+                  e.priourity?.toLowerCase() === "high" ? "bg-red-100 text-red-700 border-red-300" :
+                    e.priourity?.toLowerCase() === "medium" ? "bg-yellow-100 text-yellow-700 border-yellow-300" :
+                      e.priourity?.toLowerCase() === "low" ? "bg-green-100 text-green-700 border-green-300" :
+                        "bg-gray-100 text-gray-700 border-gray-300";
 
-            {record.map((e, i) => {
-              const priorityColor =
-                e.priourity?.toLowerCase() === "high"
-                  ? "bg-red-100 text-red-700 border-red-300"
-                  : e.priourity?.toLowerCase() === "medium"
-                  ? "bg-yellow-100 text-yellow-700 border-yellow-300"
-                  : e.priourity?.toLowerCase() === "low"
-                  ? "bg-green-100 text-green-700 border-green-300"
-                  : "bg-gray-100 text-gray-700 border-gray-300";
-
-              return (
-                <div key={i} className="border w-65 rounded-xl p-4 shadow-sm hover:shadow-md transition">
-                  <h3 className="font-semibold text-gray-800">{e.Task}</h3>
-
-                  <span className={`inline-block mt-2 px-3 py-1 rounded-full text-sm border ${priorityColor}`}>
-                    {e.priourity}
-                  </span>
-
-                  <div className="flex gap-2 mt-4">
-                    <button
-                      onClick={() => handleEdit(e.docId)}
-                      className="flex-1 px-4 py-2 cursor-pointer bg-indigo-500 text-white rounded-lg text-sm font-medium hover:opacity-90"
-                    >
-                      Edit
-                    </button>
-
-                    <button
-                      onClick={() => handleDelete(e.docId)}
-                      className="flex-1 px-4 py-2 cursor-pointer bg-red-500 text-white rounded-lg text-sm font-medium hover:opacity-90"
-                    >
-                      Delete
-                    </button>
+                return (
+                  <div key={i} className="border w-65 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                    <h3 className="font-semibold text-gray-800">{e.Task}</h3>
+                    <span className={`inline-block mt-2 px-3 py-1 rounded-full text-sm border ${priorityColor}`}>
+                      {e.priourity}
+                    </span>
+                    <div className="flex gap-2 mt-4">
+                      <button onClick={() => handleEdit(e.docId)} className="flex-1 px-4 py-2 cursor-pointer bg-indigo-500 text-white rounded-lg text-sm font-medium hover:opacity-90" >
+                        Edit
+                      </button>
+                      <button onClick={() => handleDelete(e.docId)} className="flex-1 px-4 py-2 cursor-pointer bg-red-500 text-white rounded-lg text-sm font-medium hover:opacity-90" >
+                        Delete
+                      </button>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         )}
       </div>

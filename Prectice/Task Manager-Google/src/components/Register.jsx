@@ -47,78 +47,38 @@ export default function Register() {
 
         {/* Form Section */}
         <div className="px-8 py-10 space-y-6">
-
           <div>
             <label className="block font-medium mb-2">Full Name</label>
-            <input
-              type="text"
-              name="name"
-              onChange={handlechange}
-              placeholder="Enter Your Full Name"
-              className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400"
-            />
+            <input type="text" name="name" onChange={handlechange} placeholder="Enter Your Full Name" className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400" />
           </div>
-
           <div>
             <label className="block font-medium mb-2">Age</label>
-            <input
-              type="number"
-              name="age"
-              onChange={handlechange}
-              placeholder="Enter Your Age"
-              className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400"
-            />
+            <input type="number" name="age" onChange={handlechange} placeholder="Enter Your Age" className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400" />
           </div>
-
           <div>
             <label className="block font-medium mb-2">Email</label>
-            <input
-              type="email"
-              name="email"
-              onChange={handlechange}
-              placeholder="Enter Your Email"
-              className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400"
-            />
+            <input type="email" name="email" onChange={handlechange} placeholder="Enter Your Email" className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400" />
           </div>
-
           <div>
             <label className="block font-medium mb-2">Password</label>
-            <input
-              type="password"
-              name="password"
-              onChange={handlechange}
-              placeholder="Enter Your Password"
-              className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400"
-            />
+            <input type="password" name="password" onChange={handlechange} placeholder="Enter Your Password" className="w-full border rounded-xl px-4 py-3 bg-gray-50 outline-none focus:ring-2 focus:ring-purple-400" />
           </div>
 
           {/* Submit Button */}
-          <button
-            onClick={handleRegister}
-            className="w-full cursor-pointer py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 transition"
-          >
+          <button onClick={handleRegister} className="w-full cursor-pointer py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 transition" >
             Sign Up
           </button>
 
           {/* Google Sign-in */}
-          <button
-            onClick={handleSignIn}
-            className="w-full cursor-pointer flex items-center justify-center gap-3 py-3 border rounded-xl hover:bg-gray-50 transition font-medium"
-          >
-            <img
-              src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-              alt="Google"
-              className="w-5 h-5"
-            />
+          <button onClick={handleSignIn} className="w-full cursor-pointer flex items-center justify-center gap-3 py-3 border rounded-xl hover:bg-gray-50 transition font-medium" >
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
             Sign in with Google
           </button>
 
           {/* Footer */}
           <p className="text-center text-gray-600">
             Already have an account?{" "}
-            <Link to="/login" className="text-blue-600 font-semibold hover:underline">
-              Login
-            </Link>
+            <Link to="/login" className="text-blue-600 font-semibold hover:underline">Login</Link>
           </p>
         </div>
       </div>
