@@ -1,7 +1,7 @@
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import React, { useEffect, useState } from 'react'
 import { auth, db } from '../../firebaseConfig'
-import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, updateDoc } from 'firebase/firestore'
+import { collection, doc, getDoc, getDocs } from 'firebase/firestore'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function Dashboard() {
