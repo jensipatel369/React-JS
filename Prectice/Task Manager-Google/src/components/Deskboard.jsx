@@ -68,6 +68,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 cursor-pointer bg-purple-100 text-purple-700 rounded-full flex items-center justify-center text-3xl font-bold">
               {userData?.name?.charAt(0).toUpperCase()}
+              {/* <img src={userData?.photo ? userData.photo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfgJ0SYGF5qAueA_nbIYvUB58DCZ2KG-DkYA&s"} alt="User" className="w-12 h-12 rounded-full mt-2" /> */}
             </div>
             <div>
               <h3 className="text-lg font-semibold">{userData?.name}</h3>
