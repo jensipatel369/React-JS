@@ -1,10 +1,13 @@
 Library and Frame work difference :-
 -> Library and frame work both provide pre-return code and functionality's but frame work is fully independent but library is not.
 
+
+
+
 ...React JS...
 
 React JS :-
--> React is a JavaScript library. Maintain and develop by facebook. Use to create single page application and provide us reach user interface (UI).
+-> React is a JavaScript library. Maintain and develop by Facebook. Use to create single page application and provide us reach user interface (UI).
 
 Features React JS :-
 -> Components
@@ -18,11 +21,13 @@ React JS project run Commands :-
 3. npm dev
 
 
+
+
 ...Full Form...
 
 SWC :- Speedy Web Compiler  
 npm :- Node package manager
-npx :- Node Package eXecute
+npx :- Node Package execute
 jsx :- JavaScript XML
 
 
@@ -121,7 +126,7 @@ Higher-Order Components :-  A Higher-Order Component (HOC) in React is a functio
 Routing in React.js refers to the process of navigation between different views or components within a single-page application (SPA) without requiring a full page reload.
 
 
-....React-router-dom Hook...
+....React-router-Dom Hook...
 
 1. useNavigate()
 2. useLocation()
@@ -154,7 +159,7 @@ npx json-server --port 5000 --watch db.json
    1. Create Context
    2. Provide Context
    3. Consume Context
-4. Managing state globaly -> Redux
+4. Managing state globally -> Redux
 
 
 ...Hooks...
@@ -168,7 +173,10 @@ npx json-server --port 5000 --watch db.json
 
 ...Redux...
 
-Definition of Redux :- Redux is a JavaScript library for predictable state management, commonly used with React to manage application-wide state. It provides a centralized store for your application's state, enabling a consistent and debuggable way to manage data flow.
+Definition of Redux :- Redux is a JavaScript library for predictable state management, commonly used with React to manage application-wide state. It provides a centralized store for your application's state, enabling a consistent and debug gable way to manage data flow.
+
+Hinglish :- Redux ek JS library Hai jo React me state ko centralized aur easy-to-manage banati Hai.
+
 
 Key Concepts of Redux in React :-
 
@@ -201,23 +209,4 @@ Key Concepts of Redux in React :-
 - no to GitHub deploy
 4. npm run build
 5. firebase deploy
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
