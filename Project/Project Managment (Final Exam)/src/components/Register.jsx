@@ -31,7 +31,7 @@ export default function Register() {
         email: res.user.email,
         photo: res.user.photoURL
       })
-      navigate('/deskboard')
+      navigate('/deshboard')
     })
   }
 

@@ -16,7 +16,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     await signInWithEmailAndPassword(auth, formdata.email, formdata.password).then((res) => {
-      navigate('/deskboard')
+      navigate('/deshboard')
     })
   }
 
@@ -90,7 +90,7 @@ export default function Login() {
           <div className='flex justify-center'>
             <p className="text-sm text-slate-300">
               Don't have an account?{" "}
-              <Link className="text-emerald-400 hover:text-emerald-300 font-semibold" to="/">
+              <Link className="text-blue-400 hover:text-blue-300 font-semibold" to="/">
                 Sign up
               </Link>
             </p>

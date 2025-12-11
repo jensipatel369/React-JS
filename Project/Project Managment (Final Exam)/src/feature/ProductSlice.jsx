@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const todo = createSlice({
-    name: "todo",
+export const product = createSlice({
+    name: "product",
     initialState: { record: [] },
     reducers: {
         addData: (state, action) => {
@@ -20,5 +20,5 @@ export const todo = createSlice({
     }
 })
 
-export default todo.reducer
-export const { addData, deleteData, updateData } = todo.actions
+export default product.reducer
+export const { addData, deleteData, updateData } = product.actions

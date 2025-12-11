@@ -55,7 +55,7 @@ export default function Dashboard() {
           <h1 className="text-3xl font-bold text-white">Dashboard</h1>
         </div>
         <div className="flex items-center gap-3">
-          <Link to="/crud" className="btn-secondary hidden sm:inline-flex" >Manage Product Card</Link>
+          <Link to="/product-card" className="btn-secondary hidden sm:inline-flex" >Manage Product Card</Link>
           <button onClick={handleLogout} className="btn-primary cursor-pointer">Logout</button>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function Dashboard() {
             </div>
             <h2 className="text-4xl font-bold text-white">{record?.length || 0}</h2>
             <p className="text-sm text-slate-300">All items in your workspace</p>
-            <Link to="/crud" className="btn-secondary w-full justify-center">
+            <Link to="/product-card" className="btn-secondary w-full justify-center">
               Open Product Card
             </Link>
           </div>

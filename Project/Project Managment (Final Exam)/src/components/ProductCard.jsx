@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addData, deleteData, updateData } from '../feature/TodoSlice'
+import { addData, deleteData, updateData } from '../feature/ProductSlice'
 import { Link } from 'react-router-dom'
 
-export default function CRUD() {
+export default function ProductCard() {
 
     const dispatch = useDispatch()
 
@@ -11,16 +11,10 @@ export default function CRUD() {
     const [cat, setCat] = useState("all")
     const [sort, setSort] = useState("")
 
-    const [formdata, setFormdata] = useState({
-        title: '',
-        description: '',
-        price: '',
-        category: ''
-    })
-
+    const [formdata, setFormdata] = useState({})
     const [editIndex, setEditIndex] = useState(null)
 
-    const data = useSelector((state) => state.TodoKey.record)
+    const data = useSelector((state) => state.ProductKey.record)
 
     // FIX: remove ID from here
     const handleChange = (e) => {
@@ -117,7 +111,7 @@ export default function CRUD() {
                     </select>
 
                     <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white">
-                        <Link to="/deskboard" className="text-blue-400">Back to Dashboard</Link>
+                        <Link to="/deshboard" className="text-blue-400">Back to Dashboard</Link>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todo from "../feature/TodoSlice";
+import product from "../feature/ProductSlice";
 
 export const store = configureStore({
   reducer : {
-    TodoKey : todo
+    ProductKey : product
   }
 })
